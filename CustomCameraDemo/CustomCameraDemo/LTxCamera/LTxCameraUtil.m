@@ -10,7 +10,9 @@
 
 @implementation LTxCameraUtil
 
-/** 打开手电筒 */
+/**
+ * 打开手电筒
+ **/
 + (void)openFlashlight {
     AVCaptureDevice *captureDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     NSError *error = nil;
@@ -22,7 +24,9 @@
         }
     }
 }
-/** 关闭手电筒 */
+/**
+ * 关闭手电筒
+ **/
 + (void)closeFlashlight {
     AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     if ([device hasTorch]) {
@@ -33,7 +37,7 @@
 }
 
 #pragma mark - 保存图片到系统相册
-+ (void)saveImageToAblum:(UIImage *)image completion:(void (^)(BOOL, PHAsset *))completion{
++ (void)saveImageToAblum:(UIImage *)image completion:(LTxCameraBOOLAndPHAssetCallbackBlock)completion{
     PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
     if (status == PHAuthorizationStatusDenied) {
         if (completion) completion(NO, nil);
@@ -62,8 +66,7 @@
     }
 }
 
-+ (void)saveVideoToAblum:(NSURL *)url completion:(void (^)(BOOL, PHAsset *))completion
-{
++ (void)saveVideoToAblum:(NSURL *)url completion:(LTxCameraBOOLAndPHAssetCallbackBlock)completion{
     PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
     if (status == PHAuthorizationStatusDenied) {
         if (completion) completion(NO, nil);
@@ -106,10 +109,6 @@
 //获取自定义相册
 + (PHAssetCollection *)getDestinationCollection{
     NSString* albumName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
-    if (!albumName) {
-        albumName = @"LTxCamera";
-    }
-    
     //找是否已经创建自定义相册
     PHFetchResult<PHAssetCollection *> *collectionResult = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeAlbum subtype:PHAssetCollectionSubtypeAlbumRegular options:nil];
     for (PHAssetCollection *collection in collectionResult) {

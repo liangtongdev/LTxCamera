@@ -101,7 +101,7 @@
 #pragma mark - 动画
 - (void)startAnimate{
     self.dismissBtn.hidden = YES;
-    [UIView animateWithDuration:LTXSIPPR_CAMERA_SHOOT_VIEW_ANIMATE_DURATION animations:^{
+    [UIView animateWithDuration:LTX_CAMERA_SHOOT_VIEW_ANIMATE_DURATION animations:^{
         self.bottomView.layer.transform = CATransform3DScale(CATransform3DIdentity, 1.5, 1.5, 1);
         self.topView.layer.transform = CATransform3DScale(CATransform3DIdentity, 0.8, 0.8, 1);
     } completion:^(BOOL finished) {
@@ -141,7 +141,7 @@
 }
 
 - (void)showCancelDoneBtn{
-    [UIView animateWithDuration:LTXSIPPR_CAMERA_SHOOT_VIEW_ANIMATE_DURATION animations:^{
+    [UIView animateWithDuration:LTX_CAMERA_SHOOT_VIEW_ANIMATE_DURATION animations:^{
         self.cancelBtn.hidden = NO;
         self.doneBtn.hidden = NO;
     }];
@@ -176,15 +176,15 @@
     //约束
     [self addConstraintsOnComponents];
     
-    _bottomView.layer.cornerRadius = LTXSIPPR_CAMERA_SHOOT_VIEW_ACTION_BACKGROUND_WIDTH / 2;
+    _bottomView.layer.cornerRadius = LTX_CAMERA_SHOOT_VIEW_ACTION_BACKGROUND_WIDTH / 2;
     _bottomView.layer.masksToBounds = YES;
-    _topView.layer.cornerRadius = LTXSIPPR_CAMERA_SHOOT_VIEW_ACTION_FORGROUND_WIDTH / 2;
+    _topView.layer.cornerRadius = LTX_CAMERA_SHOOT_VIEW_ACTION_FORGROUND_WIDTH / 2;
     _topView.layer.masksToBounds = YES;
-//    _dismissBtn.layer.cornerRadius = LTXSIPPR_CAMERA_SHOOT_VIEW_ACTION_BUTTON_WIDTH / 2;
+//    _dismissBtn.layer.cornerRadius = LTX_CAMERA_SHOOT_VIEW_ACTION_BUTTON_WIDTH / 2;
 //    _dismissBtn.layer.masksToBounds = YES;
-    _cancelBtn.layer.cornerRadius = LTXSIPPR_CAMERA_SHOOT_VIEW_ACTION_BUTTON_WIDTH / 2;
+    _cancelBtn.layer.cornerRadius = LTX_CAMERA_SHOOT_VIEW_ACTION_BUTTON_WIDTH / 2;
     _cancelBtn.layer.masksToBounds = YES;
-    _doneBtn.layer.cornerRadius = LTXSIPPR_CAMERA_SHOOT_VIEW_ACTION_BUTTON_WIDTH / 2;
+    _doneBtn.layer.cornerRadius = LTX_CAMERA_SHOOT_VIEW_ACTION_BUTTON_WIDTH / 2;
     _doneBtn.layer.masksToBounds = YES;
     
 }
@@ -194,17 +194,17 @@
     //
     NSLayoutConstraint* bCenterX = [NSLayoutConstraint constraintWithItem:_bottomView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.f constant:0];
     NSLayoutConstraint* bCenterY = [NSLayoutConstraint constraintWithItem:_bottomView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1.f constant:0];
-    NSLayoutConstraint* bWidth = [NSLayoutConstraint constraintWithItem:_bottomView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.f constant:LTXSIPPR_CAMERA_SHOOT_VIEW_ACTION_BACKGROUND_WIDTH];
+    NSLayoutConstraint* bWidth = [NSLayoutConstraint constraintWithItem:_bottomView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.f constant:LTX_CAMERA_SHOOT_VIEW_ACTION_BACKGROUND_WIDTH];
     NSLayoutConstraint* bHeight = [NSLayoutConstraint constraintWithItem:_bottomView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_bottomView attribute:NSLayoutAttributeWidth multiplier:1.f constant:0];
     
     NSLayoutConstraint* fCenterX = [NSLayoutConstraint constraintWithItem:_topView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:_bottomView attribute:NSLayoutAttributeCenterX multiplier:1.f constant:0];
     NSLayoutConstraint* fCenterY = [NSLayoutConstraint constraintWithItem:_topView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:_bottomView attribute:NSLayoutAttributeCenterY multiplier:1.f constant:0];
-    NSLayoutConstraint* fWidth = [NSLayoutConstraint constraintWithItem:_topView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.f constant:LTXSIPPR_CAMERA_SHOOT_VIEW_ACTION_FORGROUND_WIDTH];
+    NSLayoutConstraint* fWidth = [NSLayoutConstraint constraintWithItem:_topView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.f constant:LTX_CAMERA_SHOOT_VIEW_ACTION_FORGROUND_WIDTH];
     NSLayoutConstraint* fHeight = [NSLayoutConstraint constraintWithItem:_topView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_topView attribute:NSLayoutAttributeWidth multiplier:1.f constant:0];
     
-    NSLayoutConstraint* dCenterX = [NSLayoutConstraint constraintWithItem:_dismissBtn attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:_bottomView attribute:NSLayoutAttributeLeading multiplier:1.f constant:-LTXSIPPR_CAMERA_SHOOT_VIEW_ACTION_BUTTON_PADDING];
+    NSLayoutConstraint* dCenterX = [NSLayoutConstraint constraintWithItem:_dismissBtn attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:_bottomView attribute:NSLayoutAttributeLeading multiplier:1.f constant:-LTX_CAMERA_SHOOT_VIEW_ACTION_BUTTON_PADDING];
     NSLayoutConstraint* dCenterY = [NSLayoutConstraint constraintWithItem:_dismissBtn attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:_bottomView attribute:NSLayoutAttributeCenterY multiplier:1.f constant:0];
-    NSLayoutConstraint* dWidth = [NSLayoutConstraint constraintWithItem:_dismissBtn attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.f constant:LTXSIPPR_CAMERA_SHOOT_VIEW_ACTION_BUTTON_WIDTH];
+    NSLayoutConstraint* dWidth = [NSLayoutConstraint constraintWithItem:_dismissBtn attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.f constant:LTX_CAMERA_SHOOT_VIEW_ACTION_BUTTON_WIDTH];
     NSLayoutConstraint* dHeight = [NSLayoutConstraint constraintWithItem:_dismissBtn attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_dismissBtn attribute:NSLayoutAttributeWidth multiplier:1.f constant:0];
     
     NSLayoutConstraint* cLeading = [NSLayoutConstraint constraintWithItem:_cancelBtn attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:_dismissBtn attribute:NSLayoutAttributeLeading multiplier:1.f constant:0];
@@ -212,9 +212,9 @@
     NSLayoutConstraint* cTop = [NSLayoutConstraint constraintWithItem:_cancelBtn attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:_dismissBtn attribute:NSLayoutAttributeTop multiplier:1.f constant:0];
     NSLayoutConstraint* cBottom = [NSLayoutConstraint constraintWithItem:_cancelBtn attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:_dismissBtn attribute:NSLayoutAttributeBottom multiplier:1.f constant:0];
     
-    NSLayoutConstraint* doneCenterX = [NSLayoutConstraint constraintWithItem:_doneBtn attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:_bottomView attribute:NSLayoutAttributeTrailing multiplier:1.f constant:LTXSIPPR_CAMERA_SHOOT_VIEW_ACTION_BUTTON_PADDING];
+    NSLayoutConstraint* doneCenterX = [NSLayoutConstraint constraintWithItem:_doneBtn attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:_bottomView attribute:NSLayoutAttributeTrailing multiplier:1.f constant:LTX_CAMERA_SHOOT_VIEW_ACTION_BUTTON_PADDING];
     NSLayoutConstraint* doneCenterY = [NSLayoutConstraint constraintWithItem:_doneBtn attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:_bottomView attribute:NSLayoutAttributeCenterY multiplier:1.f constant:0];
-    NSLayoutConstraint* doneWidth = [NSLayoutConstraint constraintWithItem:_doneBtn attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.f constant:LTXSIPPR_CAMERA_SHOOT_VIEW_ACTION_BUTTON_WIDTH];
+    NSLayoutConstraint* doneWidth = [NSLayoutConstraint constraintWithItem:_doneBtn attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.f constant:LTX_CAMERA_SHOOT_VIEW_ACTION_BUTTON_WIDTH];
     NSLayoutConstraint* doneHeight = [NSLayoutConstraint constraintWithItem:_doneBtn attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_doneBtn attribute:NSLayoutAttributeWidth multiplier:1.f constant:0];
     
     [NSLayoutConstraint activateConstraints: @[bCenterX,bCenterY,bWidth,bHeight,
@@ -295,7 +295,7 @@
 - (CAShapeLayer *)animateLayer{
     if (!_animateLayer) {
         _animateLayer = [CAShapeLayer layer];
-        UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, LTXSIPPR_CAMERA_SHOOT_VIEW_ACTION_BACKGROUND_WIDTH, LTXSIPPR_CAMERA_SHOOT_VIEW_ACTION_BACKGROUND_WIDTH) cornerRadius:LTXSIPPR_CAMERA_SHOOT_VIEW_ACTION_BACKGROUND_WIDTH / 2];
+        UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, LTX_CAMERA_SHOOT_VIEW_ACTION_BACKGROUND_WIDTH, LTX_CAMERA_SHOOT_VIEW_ACTION_BACKGROUND_WIDTH) cornerRadius:LTX_CAMERA_SHOOT_VIEW_ACTION_BACKGROUND_WIDTH / 2];
         
         _animateLayer.strokeColor = self.circleProgressColor.CGColor;
         _animateLayer.fillColor = [UIColor clearColor].CGColor;

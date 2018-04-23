@@ -11,7 +11,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "LTxCameraVideoPlayerView.h"
 #import "LTxCameraUtil.h"
-#define  LTXSIPPR_CAMERA_TOOL_VIEW_HEIGH 160
+#define  LTX_CAMERA_TOOL_VIEW_HEIGH 160
 
 @interface LTxCameraShootViewController ()<LTxCameraShootToolDelegate,AVCaptureFileOutputRecordingDelegate>
 
@@ -309,7 +309,7 @@
     if (!self.session.isRunning) return;
     
     CGPoint point = [touches.anyObject locationInView:self.view];
-    if (point.y > CGRectGetHeight(self.view.bounds) - LTXSIPPR_CAMERA_TOOL_VIEW_HEIGH) {
+    if (point.y > CGRectGetHeight(self.view.bounds) - LTX_CAMERA_TOOL_VIEW_HEIGH) {
         return;
     }
     [self setFocusCursorWithPoint:point];
@@ -378,12 +378,12 @@
 -(void)addConstraintsOnComponents{
     NSLayoutConstraint* tLeading = [NSLayoutConstraint constraintWithItem:_toolView attribute:NSLayoutAttributeLeadingMargin relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeadingMargin multiplier:1.f constant:-20];
     NSLayoutConstraint* tTrailing = [NSLayoutConstraint constraintWithItem:_toolView attribute:NSLayoutAttributeTrailingMargin relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailingMargin multiplier:1.f constant:20];
-    NSLayoutConstraint* tHeight = [NSLayoutConstraint constraintWithItem:_toolView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.f constant:LTXSIPPR_CAMERA_TOOL_VIEW_HEIGH];
+    NSLayoutConstraint* tHeight = [NSLayoutConstraint constraintWithItem:_toolView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.f constant:LTX_CAMERA_TOOL_VIEW_HEIGH];
     NSLayoutConstraint* tBottom = [NSLayoutConstraint constraintWithItem:_toolView attribute:NSLayoutAttributeBottomMargin relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottomMargin multiplier:1.f constant:0];
     
     NSLayoutConstraint* bTop = [NSLayoutConstraint constraintWithItem:_toggleCameraBtn attribute:NSLayoutAttributeTopMargin relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTopMargin multiplier:1.f constant:20];
     NSLayoutConstraint* bTrailing = [NSLayoutConstraint constraintWithItem:_toggleCameraBtn attribute:NSLayoutAttributeTrailingMargin relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailingMargin multiplier:1.f constant:-10];
-    NSLayoutConstraint* bWidth = [NSLayoutConstraint constraintWithItem:_toggleCameraBtn attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.f constant:LTXSIPPR_CAMERA_SHOOT_VIEW_ACTION_BUTTON_WIDTH];
+    NSLayoutConstraint* bWidth = [NSLayoutConstraint constraintWithItem:_toggleCameraBtn attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.f constant:LTX_CAMERA_SHOOT_VIEW_ACTION_BUTTON_WIDTH];
     NSLayoutConstraint* bHeight = [NSLayoutConstraint constraintWithItem:_toggleCameraBtn attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_toggleCameraBtn attribute:NSLayoutAttributeWidth multiplier:1.f constant:0];
     
     NSLayoutConstraint* aCenterX = [NSLayoutConstraint constraintWithItem:_activityView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.f constant:0];
