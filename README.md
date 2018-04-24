@@ -1,7 +1,7 @@
-# LTChat
-Chat use XMPP framework and WebRTC framework.
-
-### Screenshots
+# LTxCamera
+ + 拍照
+ + 小视频
+ + 扫码
 
 ### Usage
 
@@ -14,14 +14,14 @@ LTxCamera is available in CocoaPods, specify it in your *Podfile*:
 ```
 
 
-####  photo-shooting and video-recording
+####  拍照/小视频
 
 
 ```Objective-C
     LTxCameraShootViewController* cameraShootVC = [[LTxCameraShootViewController alloc] init];
-    cameraShootVC.allowTakePhoto = YES;
-    cameraShootVC.allowRecordVideo = YES;
-    cameraShootVC.maxRecordDuration = 15;
+    cameraShootVC.allowTakePhoto = YES;//允许拍照
+    cameraShootVC.allowRecordVideo = YES;//允许录制视频
+    cameraShootVC.maxRecordDuration = 15;//录制视频最大时长
     cameraShootVC.shootDoneCallback = ^(UIImage* image, NSURL* videoPath, PHAsset *asset){
         
     };
@@ -37,21 +37,3 @@ LTxCamera is available in CocoaPods, specify it in your *Podfile*:
 MIT License
 
 Copyright (c) 2017 liangtong
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
