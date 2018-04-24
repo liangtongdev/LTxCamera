@@ -3,6 +3,9 @@
  + 小视频
  + 扫码
 
+![](https://github.com/liangtongdev/LTxCamera/blob/master/screenshots/camera.png)
+
+
 ### Usage
 
 ####  Installation with CocoaPods
