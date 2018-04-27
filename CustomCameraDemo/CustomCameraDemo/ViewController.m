@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import "LTxCameraShootViewController.h"
+#import "LTxCameraScanViewController.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.title = @"LTxCamera";
 }
 
 - (IBAction)showCameraAction:(UIButton *)sender {
@@ -32,9 +34,12 @@
     });
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)scanCodeAction:(UIButton *)sender {
+    LTxCameraScanViewController* scanVC = [[LTxCameraScanViewController alloc] init];
+    scanVC.scanCallback = ^(NSString *qrcode) {
+        NSLog(@"qrcode : %@",qrcode);
+    };
+    [self.navigationController pushViewController:scanVC animated:NO];
 }
 
 

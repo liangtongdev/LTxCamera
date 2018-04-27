@@ -7,20 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		275E4B01208F053D00A7285C /* LTxCameraShootToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E4AF8208F053D00A7285C /* LTxCameraShootToolView.m */; };
+		275E4B02208F053D00A7285C /* LTxCameraShootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E4AFA208F053D00A7285C /* LTxCameraShootViewController.m */; };
+		275E4B03208F053D00A7285C /* LTxCameraVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E4AFC208F053D00A7285C /* LTxCameraVideoPlayerView.m */; };
+		275E4B04208F053D00A7285C /* LTxCameraUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E4B00208F053D00A7285C /* LTxCameraUtil.m */; };
+		275E4B07208F06E500A7285C /* LTxCameraScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E4B06208F06E500A7285C /* LTxCameraScanView.m */; };
+		275E4B0D20919BEB00A7285C /* LTxCameraScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E4B0C20919BEB00A7285C /* LTxCameraScanViewController.m */; };
 		2762E3A2208B38C2000504C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2762E3A1208B38C2000504C1 /* AppDelegate.m */; };
 		2762E3A5208B38C2000504C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2762E3A4208B38C2000504C1 /* ViewController.m */; };
 		2762E3A8208B38C2000504C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2762E3A6208B38C2000504C1 /* Main.storyboard */; };
 		2762E3AA208B38C2000504C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2762E3A9208B38C2000504C1 /* Assets.xcassets */; };
 		2762E3AD208B38C2000504C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2762E3AB208B38C2000504C1 /* LaunchScreen.storyboard */; };
 		2762E3B0208B38C2000504C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2762E3AF208B38C2000504C1 /* main.m */; };
-		2762E3BD208B3939000504C1 /* LTxCameraVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2762E3B7208B3939000504C1 /* LTxCameraVideoPlayerView.m */; };
-		2762E3BE208B3939000504C1 /* LTxCameraShootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2762E3B9208B3939000504C1 /* LTxCameraShootViewController.m */; };
-		2762E3BF208B3939000504C1 /* LTxCameraShootToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2762E3BC208B3939000504C1 /* LTxCameraShootToolView.m */; };
 		2762E3C6208B3EAF000504C1 /* LTxCamera.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2762E3C5208B3EAF000504C1 /* LTxCamera.bundle */; };
-		2762E3C8208B3FD2000504C1 /* LTxCameraUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2762E3C7208B3FD2000504C1 /* LTxCameraUtil.m */; };
+		27F758872093116800142093 /* LTxQRCodeGenerate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F758862093116800142093 /* LTxQRCodeGenerate.m */; };
+		27F7588A2093121B00142093 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F758892093121B00142093 /* QRCodeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		275E4AF7208F053D00A7285C /* LTxCameraShootToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTxCameraShootToolView.h; sourceTree = "<group>"; };
+		275E4AF8208F053D00A7285C /* LTxCameraShootToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTxCameraShootToolView.m; sourceTree = "<group>"; };
+		275E4AF9208F053D00A7285C /* LTxCameraShootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTxCameraShootViewController.h; sourceTree = "<group>"; };
+		275E4AFA208F053D00A7285C /* LTxCameraShootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTxCameraShootViewController.m; sourceTree = "<group>"; };
+		275E4AFB208F053D00A7285C /* LTxCameraVideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTxCameraVideoPlayerView.h; sourceTree = "<group>"; };
+		275E4AFC208F053D00A7285C /* LTxCameraVideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTxCameraVideoPlayerView.m; sourceTree = "<group>"; };
+		275E4AFF208F053D00A7285C /* LTxCameraUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTxCameraUtil.h; sourceTree = "<group>"; };
+		275E4B00208F053D00A7285C /* LTxCameraUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTxCameraUtil.m; sourceTree = "<group>"; };
+		275E4B05208F06E500A7285C /* LTxCameraScanView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTxCameraScanView.h; sourceTree = "<group>"; };
+		275E4B06208F06E500A7285C /* LTxCameraScanView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTxCameraScanView.m; sourceTree = "<group>"; };
+		275E4B0B20919BEB00A7285C /* LTxCameraScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTxCameraScanViewController.h; sourceTree = "<group>"; };
+		275E4B0C20919BEB00A7285C /* LTxCameraScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTxCameraScanViewController.m; sourceTree = "<group>"; };
 		2762E39D208B38C2000504C1 /* CustomCameraDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomCameraDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2762E3A0208B38C2000504C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2762E3A1208B38C2000504C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -31,15 +47,11 @@
 		2762E3AC208B38C2000504C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2762E3AE208B38C2000504C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2762E3AF208B38C2000504C1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2762E3B7208B3939000504C1 /* LTxCameraVideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTxCameraVideoPlayerView.m; sourceTree = "<group>"; };
-		2762E3B8208B3939000504C1 /* LTxCameraShootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTxCameraShootViewController.h; sourceTree = "<group>"; };
-		2762E3B9208B3939000504C1 /* LTxCameraShootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTxCameraShootViewController.m; sourceTree = "<group>"; };
-		2762E3BA208B3939000504C1 /* LTxCameraShootToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTxCameraShootToolView.h; sourceTree = "<group>"; };
-		2762E3BB208B3939000504C1 /* LTxCameraVideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTxCameraVideoPlayerView.h; sourceTree = "<group>"; };
-		2762E3BC208B3939000504C1 /* LTxCameraShootToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTxCameraShootToolView.m; sourceTree = "<group>"; };
-		2762E3C0208B3946000504C1 /* LTxCameraUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTxCameraUtil.h; sourceTree = "<group>"; };
 		2762E3C5208B3EAF000504C1 /* LTxCamera.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LTxCamera.bundle; sourceTree = "<group>"; };
-		2762E3C7208B3FD2000504C1 /* LTxCameraUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTxCameraUtil.m; sourceTree = "<group>"; };
+		27F758852093116800142093 /* LTxQRCodeGenerate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTxQRCodeGenerate.h; sourceTree = "<group>"; };
+		27F758862093116800142093 /* LTxQRCodeGenerate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTxQRCodeGenerate.m; sourceTree = "<group>"; };
+		27F758882093121B00142093 /* QRCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
+		27F758892093121B00142093 /* QRCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +65,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		275E4AF6208F053D00A7285C /* CameraShoot */ = {
+			isa = PBXGroup;
+			children = (
+				275E4AF7208F053D00A7285C /* LTxCameraShootToolView.h */,
+				275E4AF8208F053D00A7285C /* LTxCameraShootToolView.m */,
+				275E4AF9208F053D00A7285C /* LTxCameraShootViewController.h */,
+				275E4AFA208F053D00A7285C /* LTxCameraShootViewController.m */,
+				275E4AFB208F053D00A7285C /* LTxCameraVideoPlayerView.h */,
+				275E4AFC208F053D00A7285C /* LTxCameraVideoPlayerView.m */,
+			);
+			path = CameraShoot;
+			sourceTree = "<group>";
+		};
+		275E4AFD208F053D00A7285C /* CameraScan */ = {
+			isa = PBXGroup;
+			children = (
+				275E4B05208F06E500A7285C /* LTxCameraScanView.h */,
+				275E4B06208F06E500A7285C /* LTxCameraScanView.m */,
+				275E4B0B20919BEB00A7285C /* LTxCameraScanViewController.h */,
+				275E4B0C20919BEB00A7285C /* LTxCameraScanViewController.m */,
+				27F758852093116800142093 /* LTxQRCodeGenerate.h */,
+				27F758862093116800142093 /* LTxQRCodeGenerate.m */,
+			);
+			path = CameraScan;
+			sourceTree = "<group>";
+		};
+		275E4AFE208F053D00A7285C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				275E4AFF208F053D00A7285C /* LTxCameraUtil.h */,
+				275E4B00208F053D00A7285C /* LTxCameraUtil.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		2762E394208B38C1000504C1 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +124,8 @@
 				2762E3A1208B38C2000504C1 /* AppDelegate.m */,
 				2762E3A3208B38C2000504C1 /* ViewController.h */,
 				2762E3A4208B38C2000504C1 /* ViewController.m */,
+				27F758882093121B00142093 /* QRCodeViewController.h */,
+				27F758892093121B00142093 /* QRCodeViewController.m */,
 				2762E3A6208B38C2000504C1 /* Main.storyboard */,
 				2762E3A9208B38C2000504C1 /* Assets.xcassets */,
 				2762E3AB208B38C2000504C1 /* LaunchScreen.storyboard */,
@@ -89,15 +138,10 @@
 		2762E3B6208B38DF000504C1 /* LTxCamera */ = {
 			isa = PBXGroup;
 			children = (
+				275E4AFE208F053D00A7285C /* Common */,
+				275E4AF6208F053D00A7285C /* CameraShoot */,
+				275E4AFD208F053D00A7285C /* CameraScan */,
 				2762E3C5208B3EAF000504C1 /* LTxCamera.bundle */,
-				2762E3C0208B3946000504C1 /* LTxCameraUtil.h */,
-				2762E3C7208B3FD2000504C1 /* LTxCameraUtil.m */,
-				2762E3BA208B3939000504C1 /* LTxCameraShootToolView.h */,
-				2762E3BC208B3939000504C1 /* LTxCameraShootToolView.m */,
-				2762E3B8208B3939000504C1 /* LTxCameraShootViewController.h */,
-				2762E3B9208B3939000504C1 /* LTxCameraShootViewController.m */,
-				2762E3BB208B3939000504C1 /* LTxCameraVideoPlayerView.h */,
-				2762E3B7208B3939000504C1 /* LTxCameraVideoPlayerView.m */,
 			);
 			path = LTxCamera;
 			sourceTree = "<group>";
@@ -174,12 +218,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2762E3A5208B38C2000504C1 /* ViewController.m in Sources */,
-				2762E3BD208B3939000504C1 /* LTxCameraVideoPlayerView.m in Sources */,
 				2762E3B0208B38C2000504C1 /* main.m in Sources */,
-				2762E3BF208B3939000504C1 /* LTxCameraShootToolView.m in Sources */,
-				2762E3C8208B3FD2000504C1 /* LTxCameraUtil.m in Sources */,
-				2762E3BE208B3939000504C1 /* LTxCameraShootViewController.m in Sources */,
+				275E4B01208F053D00A7285C /* LTxCameraShootToolView.m in Sources */,
+				275E4B03208F053D00A7285C /* LTxCameraVideoPlayerView.m in Sources */,
+				275E4B04208F053D00A7285C /* LTxCameraUtil.m in Sources */,
+				275E4B0D20919BEB00A7285C /* LTxCameraScanViewController.m in Sources */,
+				275E4B02208F053D00A7285C /* LTxCameraShootViewController.m in Sources */,
+				27F7588A2093121B00142093 /* QRCodeViewController.m in Sources */,
+				27F758872093116800142093 /* LTxQRCodeGenerate.m in Sources */,
 				2762E3A2208B38C2000504C1 /* AppDelegate.m in Sources */,
+				275E4B07208F06E500A7285C /* LTxCameraScanView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,11 +362,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U4Y5XJ6M4W;
 				INFOPLIST_FILE = CustomCameraDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.liangtong.CameraDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eep.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -329,11 +377,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = U4Y5XJ6M4W;
 				INFOPLIST_FILE = CustomCameraDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.liangtong.CameraDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eep.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

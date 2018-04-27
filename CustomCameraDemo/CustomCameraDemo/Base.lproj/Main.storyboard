@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qu7-Sa-kqy">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,24 +19,92 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THx-qQ-1UJ">
-                                <rect key="frame" x="137.5" y="318" width="99" height="30"/>
+                                <rect key="frame" x="137.5" y="238.5" width="99" height="30"/>
                                 <state key="normal" title=" show camera "/>
                                 <connections>
                                     <action selector="showCameraAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hV1-Xy-r1Z"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rO-SY-ETo">
+                                <rect key="frame" x="148" y="308.5" width="79" height="30"/>
+                                <state key="normal" title=" code scan "/>
+                                <connections>
+                                    <action selector="scanCodeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rcq-Ya-AlP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="io0-wr-gHT">
+                                <rect key="frame" x="159.5" y="358.5" width="55" height="30"/>
+                                <state key="normal" title="QRcode"/>
+                                <connections>
+                                    <segue destination="EXS-iS-CAy" kind="show" id="VyB-lP-ovV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="4rO-SY-ETo" firstAttribute="top" secondItem="THx-qQ-1UJ" secondAttribute="bottom" constant="40" id="1Qe-z6-5Jl"/>
                             <constraint firstItem="THx-qQ-1UJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4hp-lG-enG"/>
-                            <constraint firstItem="THx-qQ-1UJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Npn-02-Pyc"/>
+                            <constraint firstItem="io0-wr-gHT" firstAttribute="centerX" secondItem="THx-qQ-1UJ" secondAttribute="centerX" id="IoF-9C-e6M"/>
+                            <constraint firstItem="THx-qQ-1UJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-80" id="Npn-02-Pyc"/>
+                            <constraint firstItem="4rO-SY-ETo" firstAttribute="centerX" secondItem="THx-qQ-1UJ" secondAttribute="centerX" id="Q2s-Jj-JOF"/>
+                            <constraint firstItem="io0-wr-gHT" firstAttribute="top" secondItem="4rO-SY-ETo" secondAttribute="bottom" constant="20" id="gBA-4Q-FTM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="jfU-UH-l23"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-191" y="122"/>
+            <point key="canvasLocation" x="2" y="121"/>
+        </scene>
+        <!--Code View Controller-->
+        <scene sceneID="rfO-gy-o5n">
+            <objects>
+                <viewController id="EXS-iS-CAy" customClass="QRCodeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ITc-fR-p6r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FEZ-s4-hio">
+                                <rect key="frame" x="67" y="213.5" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="CKb-L6-98I"/>
+                                    <constraint firstAttribute="width" constant="240" id="NP4-cQ-iHD"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FEZ-s4-hio" firstAttribute="centerX" secondItem="ITc-fR-p6r" secondAttribute="centerX" id="3A7-FK-mRt"/>
+                            <constraint firstItem="FEZ-s4-hio" firstAttribute="centerY" secondItem="ITc-fR-p6r" secondAttribute="centerY" id="3lA-Dt-CRl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="z5f-YS-FgI"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="FEZ-s4-hio" id="aWW-iL-QPR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gQq-Do-WRZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748" y="118"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lxB-qg-wEn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qu7-Sa-kqy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="29v-iC-ZAr">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="PIU-gC-ac3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jjH-7r-Weu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-802" y="121"/>
         </scene>
     </scenes>
 </document>
