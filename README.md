@@ -13,8 +13,6 @@
 
 LTxCamera is available in CocoaPods, specify it in your *Podfile*:
 
-> 稍后支持
-
 
 ```Objective-C
     pod ‘LTxCamera’
