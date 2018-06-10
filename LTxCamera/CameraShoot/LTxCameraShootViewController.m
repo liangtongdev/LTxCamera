@@ -118,10 +118,10 @@
         [LTxCameraUtil saveImageToAblum:self.takedImage completion:^(BOOL success, PHAsset *asset) {
             if (success) {
                 [weakSelf hideAnimatingActivityView];
-                [weakSelf onDismiss];
             }
-            if (self.shootDoneCallback) {
-                self.shootDoneCallback(self.takedImage, self.videoUrl,asset);
+            [weakSelf onDismiss];
+            if (weakSelf.shootDoneCallback) {
+                weakSelf.shootDoneCallback(weakSelf.takedImage, weakSelf.videoUrl,asset);
             }
         }];
     }
@@ -130,10 +130,10 @@
         [LTxCameraUtil saveVideoToAblum:self.videoUrl completion:^(BOOL success, PHAsset *asset) {
             if (success) {
                 [weakSelf hideAnimatingActivityView];
-                [weakSelf onDismiss];
             }
-            if (self.shootDoneCallback) {
-                self.shootDoneCallback(self.takedImage, self.videoUrl,asset);
+            [weakSelf onDismiss];
+            if (weakSelf.shootDoneCallback) {
+                weakSelf.shootDoneCallback(weakSelf.takedImage, weakSelf.videoUrl,asset);
             }
         }];
     }
@@ -445,7 +445,7 @@
     
     //视频输出流
     //设置视频格式
-    self.session.sessionPreset = AVCaptureSessionPreset1280x720;
+    self.session.sessionPreset = self.videoPresent ? : AVCaptureSessionPreset640x480;
     self.movieFileOutPut = [[AVCaptureMovieFileOutput alloc] init];
     
     //将视频及音频输入流添加到session

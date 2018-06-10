@@ -20,6 +20,7 @@ typedef NS_ENUM(NSUInteger, LTxSipprCameraShootExportVideoType) {
 @property (nonatomic, assign) BOOL allowTakePhoto;
 @property (nonatomic, assign) BOOL allowRecordVideo;
 @property (nonatomic, assign) NSInteger maxRecordDuration;//最大录制时常
+@property (nonatomic, assign) AVCaptureSessionPreset videoPresent;//默认AVCaptureSessionPreset640x480
 
 @property (nonatomic, copy) LTxCameraImageURLAndPHAssetCallbackBlock shootDoneCallback;
 @property (nonatomic, assign) LTxSipprCameraShootExportVideoType videoType;

@@ -10,7 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <Photos/Photos.h>
 
-#define LTxImageWithName(imageName)  [UIImage imageWithContentsOfFile: [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"LTxCamera.bundle/%@",imageName] ofType:@"png"]]
+#define LTxImageWithName(imageName)  [UIImage imageWithContentsOfFile: [[NSBundle bundleForClass:[self class]] pathForResource:[NSString stringWithFormat:@"LTxCamera.bundle/%@",imageName] ofType:@"png"]]
 typedef void (^LTxCameraBOOLAndPHAssetCallbackBlock)(BOOL,PHAsset *);
 typedef void (^LTxCameraImageURLAndPHAssetCallbackBlock)(UIImage*,NSURL*,PHAsset *);
 typedef void (^LTxCameraStringCallbackBlock)(NSString *);
