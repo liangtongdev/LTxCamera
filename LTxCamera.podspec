@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "LTxCamera"
-  s.version      = "0.0.2"
+  s.version      = "0.0.5"
   s.summary      = "拍照，小视频，扫码，二维码生成"
   s.license      = "MIT"
   s.author             = { "liangtong" => "liangtongdev@163.com" }
