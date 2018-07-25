@@ -52,6 +52,7 @@
 		27F758862093116800142093 /* LTxQRCodeGenerate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTxQRCodeGenerate.m; sourceTree = "<group>"; };
 		27F758882093121B00142093 /* QRCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
 		27F758892093121B00142093 /* QRCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
+		640470C52108554F00FECCEA /* LTxCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTxCamera.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +143,7 @@
 				275E4AF6208F053D00A7285C /* CameraShoot */,
 				275E4AFD208F053D00A7285C /* CameraScan */,
 				2762E3C5208B3EAF000504C1 /* LTxCamera.bundle */,
+				640470C52108554F00FECCEA /* LTxCamera.h */,
 			);
 			path = LTxCamera;
 			sourceTree = "<group>";
