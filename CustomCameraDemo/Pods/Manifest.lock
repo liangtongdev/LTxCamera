@@ -1,0 +1,38 @@
+PODS:
+  - LTxCamera (0.0.5):
+    - LTxCamera/Ablum (= 0.0.5)
+    - LTxCamera/Common (= 0.0.5)
+    - LTxCamera/Core (= 0.0.5)
+    - LTxCamera/Model (= 0.0.5)
+    - LTxCamera/Scan (= 0.0.5)
+    - LTxCamera/Shoot (= 0.0.5)
+    - LTxCamera/View (= 0.0.5)
+  - LTxCamera/Ablum (0.0.5):
+    - LTxCamera/Common
+  - LTxCamera/Common (0.0.5):
+    - LTxCamera/Model
+  - LTxCamera/Core (0.0.5):
+    - LTxCamera/Ablum
+    - LTxCamera/Scan
+    - LTxCamera/Shoot
+  - LTxCamera/Model (0.0.5)
+  - LTxCamera/Scan (0.0.5):
+    - LTxCamera/Common
+  - LTxCamera/Shoot (0.0.5):
+    - LTxCamera/Common
+  - LTxCamera/View (0.0.5):
+    - LTxCamera/Common
+
+DEPENDENCIES:
+  - LTxCamera (from `../`)
+
+EXTERNAL SOURCES:
+  LTxCamera:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LTxCamera: 0360a1dd97e34ef749f6ff45567487138567eaab
+
+PODFILE CHECKSUM: c25f4c409e3a2580bddf230fcd70a2b8b10f99d1
+
+COCOAPODS: 1.5.2

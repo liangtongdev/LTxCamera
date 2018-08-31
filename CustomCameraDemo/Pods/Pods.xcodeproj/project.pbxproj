@@ -1,0 +1,780 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B380E72AC64C613085D476AADF7D4CF /* LTxQRCodeGenerate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F3C0810CB2457644F41431F7C9C429 /* LTxQRCodeGenerate.m */; };
+		0DC5E2E01285C4F5CB7622EBD143C150 /* LTxCameraPhotoPickerToolBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 608197E28A32EC159B9C1DA96DDF9EB1 /* LTxCameraPhotoPickerToolBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11D00DB42EF460844BE8E759F85DA2B5 /* LTxCameraScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0D867F90CA81FF670D342055671D7E /* LTxCameraScanViewController.m */; };
+		13E5810CA40D275AA6B10D8650146E3E /* LTxCameraVideoPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5CCD77715C9D92AF3A01017EDBBD6C /* LTxCameraVideoPlayerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A0408A4FA34C8D2232DCA6388394E2D /* LTxCameraAlbumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2753BC436568DABE2C4E0B10BCEBF2 /* LTxCameraAlbumModel.m */; };
+		21E785115927C57F6C92365E645AB360 /* NSBundle+LTxCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 41A9064616E0569D2A9D80FFEF9DE421 /* NSBundle+LTxCamera.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F6D79712D755052B6AF86CBC53AD5EB /* LTxCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 55236A987C2BB8B2C3C912850A4498AD /* LTxCamera.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		371878F7477755DEE566C3E0E1243B03 /* LTxCamera.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8619BA20D82C1EFF7D08844119083A5A /* LTxCamera.bundle */; };
+		42B45317BB8A70B76B6FBAADEFE7B18F /* LTxCamera-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E024D02BE0E0C720A5116A5697A2D84 /* LTxCamera-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		434CAA8DEDDBF2614F1037A98F9D9BDD /* LTxCameraShootViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E26525DC2A64CA894859F7C064E3CEE /* LTxCameraShootViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		454456AEF9C70A01FE49D92A60BA8863 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		4A8D2B308A945B1DA73FAB14744CB48B /* LTxCameraAblumTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1488BACFE6571F0DA4C2A85ACCD624AB /* LTxCameraAblumTableViewCell.m */; };
+		4D056A22CE3F5653F460542267BB16EA /* LTxCameraShootToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB83B96FBFC0A153345E94729E0ED4F8 /* LTxCameraShootToolView.m */; };
+		4E66F032A82AA8E7726D22643CB6621F /* LTxCameraPhotoCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E7F4F95818A9C6CB468E454BBAE96B3 /* LTxCameraPhotoCollectionViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E9B9767D83377437EEEC2BE3920D10F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */; };
+		5474AF80BD8EC0AF4FBF7A6437FFD7C2 /* LTxCameraScanView.h in Headers */ = {isa = PBXBuildFile; fileRef = 36B9359AEFADA9741B5E4EC7830129E0 /* LTxCameraScanView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		56944FF8C89A6F9C128352B805E0281F /* LTxCameraPhotoPickerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F8374AB1E422C8FE7A94DE428D98C334 /* LTxCameraPhotoPickerViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		56BE6AF8DDDCC787E43176EA71ACFDB4 /* LTxCameraScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1236B3E42792E7EFCE72083F0F97B0F4 /* LTxCameraScanView.m */; };
+		59E78FE720E1F9EDC17FC45C96853B51 /* LTxCameraPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45ED5B28DF38EE1A36993B58E2B26EAE /* LTxCameraPhotoCollectionViewCell.m */; };
+		5A34F9D3A68D9D196BDE01917FB77B23 /* LTxCameraPhotoPickerToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F752B636D6F72B9EED7F7C0E202467 /* LTxCameraPhotoPickerToolBar.m */; };
+		5D999493FA6FBEB64B3629CD1C864C2B /* LTxCameraAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B1DDF3F1FCE9E8A170C00E811FBEF4 /* LTxCameraAssetModel.m */; };
+		68974222FAF0DF4C06797E7E2D55A169 /* LTxCameraAssetModel.h in Headers */ = {isa = PBXBuildFile; fileRef = D768D8C60C1E52A8C5E8CD9D7F26E558 /* LTxCameraAssetModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73AEE64BB17B242A52EE8FB2B27C16DB /* LTxCameraUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1EBFCCD6A2DAC72BEDE58A609C0D8F /* LTxCameraUtil.m */; };
+		77541558B44AF7BB5CC68F420697FC96 /* LTxCameraShootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DF8E8E3FD33C6E398C3D2AF9EB8EE1 /* LTxCameraShootViewController.m */; };
+		8D4EC6A059F770FE49D1824861F920E6 /* LTxQRCodeGenerate.h in Headers */ = {isa = PBXBuildFile; fileRef = E4FF68FADCD71AED6CB5B31BBB3DCE9A /* LTxQRCodeGenerate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8DC6BA4F963DCAD94FF834614B866E85 /* LTxCameraPhotoPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE01243C948D5483AA385BEC603916FA /* LTxCameraPhotoPickerViewController.m */; };
+		955F74E3C1D8A2D0150CEA6BF6CF14C7 /* LTxCameraAblumTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B5164E614D30C75073DE342C28684DF /* LTxCameraAblumTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		97A2B1DE152194F08518CAF4DE7AB66E /* LTxCameraUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 00E99CDCE682456C1A888A99DFCB9346 /* LTxCameraUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A119ADC570B9801C66949BCF80B6310A /* NSBundle+LTxCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = EC103A72001E7FE32803F8CBF49E5B02 /* NSBundle+LTxCamera.m */; };
+		AF946EA869552FD7FCC119571AD4DF71 /* LTxCamera-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D8EC5E1D3C8A6F31D5ADE69D41DB4C /* LTxCamera-dummy.m */; };
+		B920B06E7A1B821F5910EB8F3330386E /* LTxCameraShootToolView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E324B573EB0AC36FD8F54A99BDBC397 /* LTxCameraShootToolView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C6ECC46E694C6631D231C6CAE8B65E00 /* LTxCameraAlbumModel.h in Headers */ = {isa = PBXBuildFile; fileRef = C839F1F264FE682ED9A404EE24D51077 /* LTxCameraAlbumModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C954E2B997D213FFC70717B2453B8E6C /* Pods-CustomCameraDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DB47DD27233FCCAA9712E7279890A589 /* Pods-CustomCameraDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9DC1363CEFC47C881FF6AF17060D9F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		DFEABAC9F77D1CCFA54B0CFBCC51FD50 /* LTxCameraScanViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A6AF721F1B1FF7D7F46EE29AD40618F4 /* LTxCameraScanViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E78FB6D962EFDB8FA9ABDDFEAE58A649 /* LTxCameraAblumViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 29EC1D52AFB0B46B896C75C52D7DDD1E /* LTxCameraAblumViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E7B850996876CA7D67E7A55CE0C4AEDB /* LTxCameraAblumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A750025C35834D01073952E8B4AF3 /* LTxCameraAblumViewController.m */; };
+		F5E7B0EBA6C466DA843A727FCB2C5F51 /* Pods-CustomCameraDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F99106B3EBF0C97A9554CC861834B9C /* Pods-CustomCameraDemo-dummy.m */; };
+		FD3641322A3A73A94C083A1DE9D8171B /* LTxCameraVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E2B8F902AE4DF0F2A05EF18A75D3EE /* LTxCameraVideoPlayerView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		43FC0CFA37D4ADDC216BF06CF188738C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C22410584D4BA64877782A136E31F8BE;
+			remoteInfo = LTxCamera;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00E99CDCE682456C1A888A99DFCB9346 /* LTxCameraUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LTxCameraUtil.h; path = LTxCamera/Common/LTxCameraUtil.h; sourceTree = "<group>"; };
+		0D8C3B109F5F4AF8DCC6230C1317D9DE /* Pods_CustomCameraDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CustomCameraDemo.framework; path = "Pods-CustomCameraDemo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1236B3E42792E7EFCE72083F0F97B0F4 /* LTxCameraScanView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LTxCameraScanView.m; path = LTxCamera/Scan/LTxCameraScanView.m; sourceTree = "<group>"; };
+		1488BACFE6571F0DA4C2A85ACCD624AB /* LTxCameraAblumTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LTxCameraAblumTableViewCell.m; path = LTxCamera/View/LTxCameraAblumTableViewCell.m; sourceTree = "<group>"; };
+		1D5CCD77715C9D92AF3A01017EDBBD6C /* LTxCameraVideoPlayerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LTxCameraVideoPlayerView.h; path = LTxCamera/Shoot/LTxCameraVideoPlayerView.h; sourceTree = "<group>"; };
+		1E024D02BE0E0C720A5116A5697A2D84 /* LTxCamera-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LTxCamera-umbrella.h"; sourceTree = "<group>"; };
+		1E40468D10F63F262EAA6B4733B2F187 /* Pods-CustomCameraDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CustomCameraDemo.release.xcconfig"; sourceTree = "<group>"; };
+		1E7F4F95818A9C6CB468E454BBAE96B3 /* LTxCameraPhotoCollectionViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LTxCameraPhotoCollectionViewCell.h; path = LTxCamera/View/LTxCameraPhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		23E72630E696477195A08DC0D7B6B0C5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2832FDFFFBF789DCE514B2854A1C8D88 /* Pods-CustomCameraDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CustomCameraDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		29EC1D52AFB0B46B896C75C52D7DDD1E /* LTxCameraAblumViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LTxCameraAblumViewController.h; path = LTxCamera/Ablum/LTxCameraAblumViewController.h; sourceTree = "<group>"; };
+		2E324B573EB0AC36FD8F54A99BDBC397 /* LTxCameraShootToolView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LTxCameraShootToolView.h; path = LTxCamera/Shoot/LTxCameraShootToolView.h; sourceTree = "<group>"; };
+		2FAC80A51F4F46594DA5EA09AACB559B /* LTxCamera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LTxCamera.framework; path = LTxCamera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30B1DDF3F1FCE9E8A170C00E811FBEF4 /* LTxCameraAssetModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LTxCameraAssetModel.m; path = LTxCamera/Model/LTxCameraAssetModel.m; sourceTree = "<group>"; };
+		30D8EC5E1D3C8A6F31D5ADE69D41DB4C /* LTxCamera-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LTxCamera-dummy.m"; sourceTree = "<group>"; };
+		344581A5B21057B093C3575E8A73D4F4 /* Pods-CustomCameraDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CustomCameraDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		36B9359AEFADA9741B5E4EC7830129E0 /* LTxCameraScanView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LTxCameraScanView.h; path = LTxCamera/Scan/LTxCameraScanView.h; sourceTree = "<group>"; };
+		37DF8E8E3FD33C6E398C3D2AF9EB8EE1 /* LTxCameraShootViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LTxCameraShootViewController.m; path = LTxCamera/Shoot/LTxCameraShootViewController.m; sourceTree = "<group>"; };
+		383655F7F12B7BDB8C16932D77EEE095 /* Pods-CustomCameraDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CustomCameraDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		3B5164E614D30C75073DE342C28684DF /* LTxCameraAblumTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LTxCameraAblumTableViewCell.h; path = LTxCamera/View/LTxCameraAblumTableViewCell.h; sourceTree = "<group>"; };
+		3E0929CFB8B25F104000EDDF6A8C5A03 /* LTxCamera.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LTxCamera.xcconfig; sourceTree = "<group>"; };
+		41A9064616E0569D2A9D80FFEF9DE421 /* NSBundle+LTxCamera.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBundle+LTxCamera.h"; path = "LTxCamera/Common/NSBundle+LTxCamera.h"; sourceTree = "<group>"; };
+		45ED5B28DF38EE1A36993B58E2B26EAE /* LTxCameraPhotoCollectionViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LTxCameraPhotoCollectionViewCell.m; path = LTxCamera/View/LTxCameraPhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		4A2753BC436568DABE2C4E0B10BCEBF2 /* LTxCameraAlbumModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LTxCameraAlbumModel.m; path = LTxCamera/Model/LTxCameraAlbumModel.m; sourceTree = "<group>"; };
+		4F99106B3EBF0C97A9554CC861834B9C /* Pods-CustomCameraDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CustomCameraDemo-dummy.m"; sourceTree = "<group>"; };
+		52DE680B634CB2AF4CB2E1E9DEAA94D6 /* LTxCamera.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LTxCamera.modulemap; sourceTree = "<group>"; };
+		55236A987C2BB8B2C3C912850A4498AD /* LTxCamera.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LTxCamera.h; path = LTxCamera/LTxCamera.h; sourceTree = "<group>"; };
+		5C1EBFCCD6A2DAC72BEDE58A609C0D8F /* LTxCameraUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LTxCameraUtil.m; path = LTxCamera/Common/LTxCameraUtil.m; sourceTree = "<group>"; };
+		608197E28A32EC159B9C1DA96DDF9EB1 /* LTxCameraPhotoPickerToolBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LTxCameraPhotoPickerToolBar.h; path = LTxCamera/View/LTxCameraPhotoPickerToolBar.h; sourceTree = "<group>"; };
+		632E8591EAF241D19883B4D67710A18E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D211450DDB46921A5B89E4B1BA3827E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		76BB5DCC9660BDAA49E125C33E2AE32C /* Pods-CustomCameraDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CustomCameraDemo-resources.sh"; sourceTree = "<group>"; };
+		7D2A750025C35834D01073952E8B4AF3 /* LTxCameraAblumViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LTxCameraAblumViewController.m; path = LTxCamera/Ablum/LTxCameraAblumViewController.m; sourceTree = "<group>"; };
+		7E26525DC2A64CA894859F7C064E3CEE /* LTxCameraShootViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LTxCameraShootViewController.h; path = LTxCamera/Shoot/LTxCameraShootViewController.h; sourceTree = "<group>"; };
+		82E2B8F902AE4DF0F2A05EF18A75D3EE /* LTxCameraVideoPlayerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LTxCameraVideoPlayerView.m; path = LTxCamera/Shoot/LTxCameraVideoPlayerView.m; sourceTree = "<group>"; };
+		8619BA20D82C1EFF7D08844119083A5A /* LTxCamera.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = LTxCamera.bundle; path = LTxCamera/LTxCamera.bundle; sourceTree = "<group>"; };
+		887527BFAF966A80B39D1E4140985BBD /* LTxCamera.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = LTxCamera.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		88B69D5401E80D2065B3FC30542439DB /* Pods-CustomCameraDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CustomCameraDemo-frameworks.sh"; sourceTree = "<group>"; };
+		908E902E026C5C22904CF9014A5604AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A0C5398C5CA5B113E463147D0DEED67B /* LTxCamera-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LTxCamera-prefix.pch"; sourceTree = "<group>"; };
+		A6AF721F1B1FF7D7F46EE29AD40618F4 /* LTxCameraScanViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LTxCameraScanViewController.h; path = LTxCamera/Scan/LTxCameraScanViewController.h; sourceTree = "<group>"; };
+		AB83B96FBFC0A153345E94729E0ED4F8 /* LTxCameraShootToolView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LTxCameraShootToolView.m; path = LTxCamera/Shoot/LTxCameraShootToolView.m; sourceTree = "<group>"; };
+		BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		BE01243C948D5483AA385BEC603916FA /* LTxCameraPhotoPickerViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LTxCameraPhotoPickerViewController.m; path = LTxCamera/Ablum/LTxCameraPhotoPickerViewController.m; sourceTree = "<group>"; };
+		C839F1F264FE682ED9A404EE24D51077 /* LTxCameraAlbumModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LTxCameraAlbumModel.h; path = LTxCamera/Model/LTxCameraAlbumModel.h; sourceTree = "<group>"; };
+		C9F752B636D6F72B9EED7F7C0E202467 /* LTxCameraPhotoPickerToolBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LTxCameraPhotoPickerToolBar.m; path = LTxCamera/View/LTxCameraPhotoPickerToolBar.m; sourceTree = "<group>"; };
+		CC19211148E83DBFDB9B9A3EFC37C9CD /* Pods-CustomCameraDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CustomCameraDemo.modulemap"; sourceTree = "<group>"; };
+		D1F3C0810CB2457644F41431F7C9C429 /* LTxQRCodeGenerate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LTxQRCodeGenerate.m; path = LTxCamera/Scan/LTxQRCodeGenerate.m; sourceTree = "<group>"; };
+		D3CFE1069A71E5E42C64ED0F25557171 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		D768D8C60C1E52A8C5E8CD9D7F26E558 /* LTxCameraAssetModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LTxCameraAssetModel.h; path = LTxCamera/Model/LTxCameraAssetModel.h; sourceTree = "<group>"; };
+		DB47DD27233FCCAA9712E7279890A589 /* Pods-CustomCameraDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CustomCameraDemo-umbrella.h"; sourceTree = "<group>"; };
+		E4FF68FADCD71AED6CB5B31BBB3DCE9A /* LTxQRCodeGenerate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LTxQRCodeGenerate.h; path = LTxCamera/Scan/LTxQRCodeGenerate.h; sourceTree = "<group>"; };
+		EC103A72001E7FE32803F8CBF49E5B02 /* NSBundle+LTxCamera.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+LTxCamera.m"; path = "LTxCamera/Common/NSBundle+LTxCamera.m"; sourceTree = "<group>"; };
+		F8374AB1E422C8FE7A94DE428D98C334 /* LTxCameraPhotoPickerViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LTxCameraPhotoPickerViewController.h; path = LTxCamera/Ablum/LTxCameraPhotoPickerViewController.h; sourceTree = "<group>"; };
+		FC0D867F90CA81FF670D342055671D7E /* LTxCameraScanViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LTxCameraScanViewController.m; path = LTxCamera/Scan/LTxCameraScanViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8E53BC094B472D08A66F2A11289122A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9DC1363CEFC47C881FF6AF17060D9F9 /* Foundation.framework in Frameworks */,
+				4E9B9767D83377437EEEC2BE3920D10F /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F10DC7198CC4F0E5E0FA7701CFCD04BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				454456AEF9C70A01FE49D92A60BA8863 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01A0C8F776ED13340A774A54D11163F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C839F1F264FE682ED9A404EE24D51077 /* LTxCameraAlbumModel.h */,
+				4A2753BC436568DABE2C4E0B10BCEBF2 /* LTxCameraAlbumModel.m */,
+				D768D8C60C1E52A8C5E8CD9D7F26E558 /* LTxCameraAssetModel.h */,
+				30B1DDF3F1FCE9E8A170C00E811FBEF4 /* LTxCameraAssetModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		01B680C2605DEAF6C3FC04AB8FFB8492 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8619BA20D82C1EFF7D08844119083A5A /* LTxCamera.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				908E902E026C5C22904CF9014A5604AD /* Foundation.framework */,
+				BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		2C51BD08A6B72EF30B6AE3D7E1DDBF6E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B7CD63E752639BFFE3AD87CD60795E8F /* Pods-CustomCameraDemo */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		34A38D4CCFCF73A974851E4452E3DD24 /* Shoot */ = {
+			isa = PBXGroup;
+			children = (
+				2E324B573EB0AC36FD8F54A99BDBC397 /* LTxCameraShootToolView.h */,
+				AB83B96FBFC0A153345E94729E0ED4F8 /* LTxCameraShootToolView.m */,
+				7E26525DC2A64CA894859F7C064E3CEE /* LTxCameraShootViewController.h */,
+				37DF8E8E3FD33C6E398C3D2AF9EB8EE1 /* LTxCameraShootViewController.m */,
+				1D5CCD77715C9D92AF3A01017EDBBD6C /* LTxCameraVideoPlayerView.h */,
+				82E2B8F902AE4DF0F2A05EF18A75D3EE /* LTxCameraVideoPlayerView.m */,
+			);
+			name = Shoot;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		55CA7907AD10678FD30F2FE6DCC53D60 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				D3CFE1069A71E5E42C64ED0F25557171 /* LICENSE */,
+				887527BFAF966A80B39D1E4140985BBD /* LTxCamera.podspec */,
+				6D211450DDB46921A5B89E4B1BA3827E /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		6B94BCA7B9D7B84B8A6DC68883026A5B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3B5164E614D30C75073DE342C28684DF /* LTxCameraAblumTableViewCell.h */,
+				1488BACFE6571F0DA4C2A85ACCD624AB /* LTxCameraAblumTableViewCell.m */,
+				1E7F4F95818A9C6CB468E454BBAE96B3 /* LTxCameraPhotoCollectionViewCell.h */,
+				45ED5B28DF38EE1A36993B58E2B26EAE /* LTxCameraPhotoCollectionViewCell.m */,
+				608197E28A32EC159B9C1DA96DDF9EB1 /* LTxCameraPhotoPickerToolBar.h */,
+				C9F752B636D6F72B9EED7F7C0E202467 /* LTxCameraPhotoPickerToolBar.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				8F4A727BD426574E1EB72F6A6B817041 /* Development Pods */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				BB8AA2F0860EEBD49E3B2C527468EC16 /* Products */,
+				2C51BD08A6B72EF30B6AE3D7E1DDBF6E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8F4A727BD426574E1EB72F6A6B817041 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9C5BC0353CCDF59245AD4A00219053E4 /* LTxCamera */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		9A7E24BE4D803D4DB42EDC5611C1786C /* Ablum */ = {
+			isa = PBXGroup;
+			children = (
+				29EC1D52AFB0B46B896C75C52D7DDD1E /* LTxCameraAblumViewController.h */,
+				7D2A750025C35834D01073952E8B4AF3 /* LTxCameraAblumViewController.m */,
+				F8374AB1E422C8FE7A94DE428D98C334 /* LTxCameraPhotoPickerViewController.h */,
+				BE01243C948D5483AA385BEC603916FA /* LTxCameraPhotoPickerViewController.m */,
+			);
+			name = Ablum;
+			sourceTree = "<group>";
+		};
+		9C5BC0353CCDF59245AD4A00219053E4 /* LTxCamera */ = {
+			isa = PBXGroup;
+			children = (
+				9A7E24BE4D803D4DB42EDC5611C1786C /* Ablum */,
+				B2B0D38C9C4C92C8CD2ED065A0FD751F /* Common */,
+				A6316A2C26D9BB981AF943BCEB736AF3 /* Core */,
+				01A0C8F776ED13340A774A54D11163F3 /* Model */,
+				55CA7907AD10678FD30F2FE6DCC53D60 /* Pod */,
+				E784EC92E520EB3363291CC7BA9E142C /* Scan */,
+				34A38D4CCFCF73A974851E4452E3DD24 /* Shoot */,
+				FE883403EA23708AF7E4B0C4A7EF6C9E /* Support Files */,
+				6B94BCA7B9D7B84B8A6DC68883026A5B /* View */,
+			);
+			name = LTxCamera;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		A6316A2C26D9BB981AF943BCEB736AF3 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				55236A987C2BB8B2C3C912850A4498AD /* LTxCamera.h */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		B2B0D38C9C4C92C8CD2ED065A0FD751F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				00E99CDCE682456C1A888A99DFCB9346 /* LTxCameraUtil.h */,
+				5C1EBFCCD6A2DAC72BEDE58A609C0D8F /* LTxCameraUtil.m */,
+				41A9064616E0569D2A9D80FFEF9DE421 /* NSBundle+LTxCamera.h */,
+				EC103A72001E7FE32803F8CBF49E5B02 /* NSBundle+LTxCamera.m */,
+				01B680C2605DEAF6C3FC04AB8FFB8492 /* Resources */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		B7CD63E752639BFFE3AD87CD60795E8F /* Pods-CustomCameraDemo */ = {
+			isa = PBXGroup;
+			children = (
+				632E8591EAF241D19883B4D67710A18E /* Info.plist */,
+				CC19211148E83DBFDB9B9A3EFC37C9CD /* Pods-CustomCameraDemo.modulemap */,
+				2832FDFFFBF789DCE514B2854A1C8D88 /* Pods-CustomCameraDemo-acknowledgements.markdown */,
+				383655F7F12B7BDB8C16932D77EEE095 /* Pods-CustomCameraDemo-acknowledgements.plist */,
+				4F99106B3EBF0C97A9554CC861834B9C /* Pods-CustomCameraDemo-dummy.m */,
+				88B69D5401E80D2065B3FC30542439DB /* Pods-CustomCameraDemo-frameworks.sh */,
+				76BB5DCC9660BDAA49E125C33E2AE32C /* Pods-CustomCameraDemo-resources.sh */,
+				DB47DD27233FCCAA9712E7279890A589 /* Pods-CustomCameraDemo-umbrella.h */,
+				344581A5B21057B093C3575E8A73D4F4 /* Pods-CustomCameraDemo.debug.xcconfig */,
+				1E40468D10F63F262EAA6B4733B2F187 /* Pods-CustomCameraDemo.release.xcconfig */,
+			);
+			name = "Pods-CustomCameraDemo";
+			path = "Target Support Files/Pods-CustomCameraDemo";
+			sourceTree = "<group>";
+		};
+		BB8AA2F0860EEBD49E3B2C527468EC16 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2FAC80A51F4F46594DA5EA09AACB559B /* LTxCamera.framework */,
+				0D8C3B109F5F4AF8DCC6230C1317D9DE /* Pods_CustomCameraDemo.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E784EC92E520EB3363291CC7BA9E142C /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				36B9359AEFADA9741B5E4EC7830129E0 /* LTxCameraScanView.h */,
+				1236B3E42792E7EFCE72083F0F97B0F4 /* LTxCameraScanView.m */,
+				A6AF721F1B1FF7D7F46EE29AD40618F4 /* LTxCameraScanViewController.h */,
+				FC0D867F90CA81FF670D342055671D7E /* LTxCameraScanViewController.m */,
+				E4FF68FADCD71AED6CB5B31BBB3DCE9A /* LTxQRCodeGenerate.h */,
+				D1F3C0810CB2457644F41431F7C9C429 /* LTxQRCodeGenerate.m */,
+			);
+			name = Scan;
+			sourceTree = "<group>";
+		};
+		FE883403EA23708AF7E4B0C4A7EF6C9E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				23E72630E696477195A08DC0D7B6B0C5 /* Info.plist */,
+				52DE680B634CB2AF4CB2E1E9DEAA94D6 /* LTxCamera.modulemap */,
+				3E0929CFB8B25F104000EDDF6A8C5A03 /* LTxCamera.xcconfig */,
+				30D8EC5E1D3C8A6F31D5ADE69D41DB4C /* LTxCamera-dummy.m */,
+				A0C5398C5CA5B113E463147D0DEED67B /* LTxCamera-prefix.pch */,
+				1E024D02BE0E0C720A5116A5697A2D84 /* LTxCamera-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "CustomCameraDemo/Pods/Target Support Files/LTxCamera";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1863D1A12FEC4E89230E5C041801EB1F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42B45317BB8A70B76B6FBAADEFE7B18F /* LTxCamera-umbrella.h in Headers */,
+				2F6D79712D755052B6AF86CBC53AD5EB /* LTxCamera.h in Headers */,
+				955F74E3C1D8A2D0150CEA6BF6CF14C7 /* LTxCameraAblumTableViewCell.h in Headers */,
+				E78FB6D962EFDB8FA9ABDDFEAE58A649 /* LTxCameraAblumViewController.h in Headers */,
+				C6ECC46E694C6631D231C6CAE8B65E00 /* LTxCameraAlbumModel.h in Headers */,
+				68974222FAF0DF4C06797E7E2D55A169 /* LTxCameraAssetModel.h in Headers */,
+				4E66F032A82AA8E7726D22643CB6621F /* LTxCameraPhotoCollectionViewCell.h in Headers */,
+				0DC5E2E01285C4F5CB7622EBD143C150 /* LTxCameraPhotoPickerToolBar.h in Headers */,
+				56944FF8C89A6F9C128352B805E0281F /* LTxCameraPhotoPickerViewController.h in Headers */,
+				5474AF80BD8EC0AF4FBF7A6437FFD7C2 /* LTxCameraScanView.h in Headers */,
+				DFEABAC9F77D1CCFA54B0CFBCC51FD50 /* LTxCameraScanViewController.h in Headers */,
+				B920B06E7A1B821F5910EB8F3330386E /* LTxCameraShootToolView.h in Headers */,
+				434CAA8DEDDBF2614F1037A98F9D9BDD /* LTxCameraShootViewController.h in Headers */,
+				97A2B1DE152194F08518CAF4DE7AB66E /* LTxCameraUtil.h in Headers */,
+				13E5810CA40D275AA6B10D8650146E3E /* LTxCameraVideoPlayerView.h in Headers */,
+				8D4EC6A059F770FE49D1824861F920E6 /* LTxQRCodeGenerate.h in Headers */,
+				21E785115927C57F6C92365E645AB360 /* NSBundle+LTxCamera.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31E7792DA85391A1FF887378781AF6FB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C954E2B997D213FFC70717B2453B8E6C /* Pods-CustomCameraDemo-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0E926FB1F3AA81566F2B9ACDDA6D3080 /* Pods-CustomCameraDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49A785D7328F9E675B5ABB8ABBA4486E /* Build configuration list for PBXNativeTarget "Pods-CustomCameraDemo" */;
+			buildPhases = (
+				BAC105B13792A225CB96E06B2161DCE7 /* Sources */,
+				F10DC7198CC4F0E5E0FA7701CFCD04BE /* Frameworks */,
+				31E7792DA85391A1FF887378781AF6FB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				679BC45A89679FED87721F832F6C5689 /* PBXTargetDependency */,
+			);
+			name = "Pods-CustomCameraDemo";
+			productName = "Pods-CustomCameraDemo";
+			productReference = 0D8C3B109F5F4AF8DCC6230C1317D9DE /* Pods_CustomCameraDemo.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C22410584D4BA64877782A136E31F8BE /* LTxCamera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6E42E844437268032908B51B0FFE395 /* Build configuration list for PBXNativeTarget "LTxCamera" */;
+			buildPhases = (
+				C2A03CAB4710AC1BB5E4C7534181C47F /* Sources */,
+				8E53BC094B472D08A66F2A11289122A7 /* Frameworks */,
+				1863D1A12FEC4E89230E5C041801EB1F /* Headers */,
+				49687347A853D1CE5A3C5FE2638D1767 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LTxCamera;
+			productName = LTxCamera;
+			productReference = 2FAC80A51F4F46594DA5EA09AACB559B /* LTxCamera.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = BB8AA2F0860EEBD49E3B2C527468EC16 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C22410584D4BA64877782A136E31F8BE /* LTxCamera */,
+				0E926FB1F3AA81566F2B9ACDDA6D3080 /* Pods-CustomCameraDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		49687347A853D1CE5A3C5FE2638D1767 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				371878F7477755DEE566C3E0E1243B03 /* LTxCamera.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BAC105B13792A225CB96E06B2161DCE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5E7B0EBA6C466DA843A727FCB2C5F51 /* Pods-CustomCameraDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2A03CAB4710AC1BB5E4C7534181C47F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF946EA869552FD7FCC119571AD4DF71 /* LTxCamera-dummy.m in Sources */,
+				4A8D2B308A945B1DA73FAB14744CB48B /* LTxCameraAblumTableViewCell.m in Sources */,
+				E7B850996876CA7D67E7A55CE0C4AEDB /* LTxCameraAblumViewController.m in Sources */,
+				1A0408A4FA34C8D2232DCA6388394E2D /* LTxCameraAlbumModel.m in Sources */,
+				5D999493FA6FBEB64B3629CD1C864C2B /* LTxCameraAssetModel.m in Sources */,
+				59E78FE720E1F9EDC17FC45C96853B51 /* LTxCameraPhotoCollectionViewCell.m in Sources */,
+				5A34F9D3A68D9D196BDE01917FB77B23 /* LTxCameraPhotoPickerToolBar.m in Sources */,
+				8DC6BA4F963DCAD94FF834614B866E85 /* LTxCameraPhotoPickerViewController.m in Sources */,
+				56BE6AF8DDDCC787E43176EA71ACFDB4 /* LTxCameraScanView.m in Sources */,
+				11D00DB42EF460844BE8E759F85DA2B5 /* LTxCameraScanViewController.m in Sources */,
+				4D056A22CE3F5653F460542267BB16EA /* LTxCameraShootToolView.m in Sources */,
+				77541558B44AF7BB5CC68F420697FC96 /* LTxCameraShootViewController.m in Sources */,
+				73AEE64BB17B242A52EE8FB2B27C16DB /* LTxCameraUtil.m in Sources */,
+				FD3641322A3A73A94C083A1DE9D8171B /* LTxCameraVideoPlayerView.m in Sources */,
+				0B380E72AC64C613085D476AADF7D4CF /* LTxQRCodeGenerate.m in Sources */,
+				A119ADC570B9801C66949BCF80B6310A /* NSBundle+LTxCamera.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		679BC45A89679FED87721F832F6C5689 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LTxCamera;
+			target = C22410584D4BA64877782A136E31F8BE /* LTxCamera */;
+			targetProxy = 43FC0CFA37D4ADDC216BF06CF188738C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		08A1503794D9BA7612F6425FEADF9BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E0929CFB8B25F104000EDDF6A8C5A03 /* LTxCamera.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LTxCamera/LTxCamera-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LTxCamera/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LTxCamera/LTxCamera.modulemap";
+				PRODUCT_MODULE_NAME = LTxCamera;
+				PRODUCT_NAME = LTxCamera;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		199D972A13F2B4C56847F7A89CCA83BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		32CA7964E4B5FBB351490C016F74A700 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 344581A5B21057B093C3575E8A73D4F4 /* Pods-CustomCameraDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CustomCameraDemo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CustomCameraDemo/Pods-CustomCameraDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		70F8F011A0C0B06E84E2718043C8F151 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E40468D10F63F262EAA6B4733B2F187 /* Pods-CustomCameraDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CustomCameraDemo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CustomCameraDemo/Pods-CustomCameraDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9E05AAE2AD0B289EFDBEFFC5DF11676B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E0929CFB8B25F104000EDDF6A8C5A03 /* LTxCamera.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LTxCamera/LTxCamera-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LTxCamera/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LTxCamera/LTxCamera.modulemap";
+				PRODUCT_MODULE_NAME = LTxCamera;
+				PRODUCT_NAME = LTxCamera;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FDB2FC4A1E5891381CD9D922145497F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				199D972A13F2B4C56847F7A89CCA83BC /* Debug */,
+				FDB2FC4A1E5891381CD9D922145497F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49A785D7328F9E675B5ABB8ABBA4486E /* Build configuration list for PBXNativeTarget "Pods-CustomCameraDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32CA7964E4B5FBB351490C016F74A700 /* Debug */,
+				70F8F011A0C0B06E84E2718043C8F151 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6E42E844437268032908B51B0FFE395 /* Build configuration list for PBXNativeTarget "LTxCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E05AAE2AD0B289EFDBEFFC5DF11676B /* Debug */,
+				08A1503794D9BA7612F6425FEADF9BD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

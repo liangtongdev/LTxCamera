@@ -7,52 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		275E4B01208F053D00A7285C /* LTxCameraShootToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E4AF8208F053D00A7285C /* LTxCameraShootToolView.m */; };
-		275E4B02208F053D00A7285C /* LTxCameraShootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E4AFA208F053D00A7285C /* LTxCameraShootViewController.m */; };
-		275E4B03208F053D00A7285C /* LTxCameraVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E4AFC208F053D00A7285C /* LTxCameraVideoPlayerView.m */; };
-		275E4B04208F053D00A7285C /* LTxCameraUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E4B00208F053D00A7285C /* LTxCameraUtil.m */; };
-		275E4B07208F06E500A7285C /* LTxCameraScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E4B06208F06E500A7285C /* LTxCameraScanView.m */; };
-		275E4B0D20919BEB00A7285C /* LTxCameraScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 275E4B0C20919BEB00A7285C /* LTxCameraScanViewController.m */; };
+		01701D5006CAABCC2B485A23 /* Pods_CustomCameraDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3870E3A8C90DC87B1EF4AC93 /* Pods_CustomCameraDemo.framework */; };
+		2731BD102138CA2800C16BC8 /* MainDemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2731BD0F2138CA2800C16BC8 /* MainDemoTableViewController.m */; };
 		2762E3A2208B38C2000504C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2762E3A1208B38C2000504C1 /* AppDelegate.m */; };
-		2762E3A5208B38C2000504C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2762E3A4208B38C2000504C1 /* ViewController.m */; };
 		2762E3A8208B38C2000504C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2762E3A6208B38C2000504C1 /* Main.storyboard */; };
 		2762E3AA208B38C2000504C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2762E3A9208B38C2000504C1 /* Assets.xcassets */; };
 		2762E3AD208B38C2000504C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2762E3AB208B38C2000504C1 /* LaunchScreen.storyboard */; };
 		2762E3B0208B38C2000504C1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2762E3AF208B38C2000504C1 /* main.m */; };
-		2762E3C6208B3EAF000504C1 /* LTxCamera.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2762E3C5208B3EAF000504C1 /* LTxCamera.bundle */; };
-		27F758872093116800142093 /* LTxQRCodeGenerate.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F758862093116800142093 /* LTxQRCodeGenerate.m */; };
 		27F7588A2093121B00142093 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27F758892093121B00142093 /* QRCodeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		275E4AF7208F053D00A7285C /* LTxCameraShootToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTxCameraShootToolView.h; sourceTree = "<group>"; };
-		275E4AF8208F053D00A7285C /* LTxCameraShootToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTxCameraShootToolView.m; sourceTree = "<group>"; };
-		275E4AF9208F053D00A7285C /* LTxCameraShootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTxCameraShootViewController.h; sourceTree = "<group>"; };
-		275E4AFA208F053D00A7285C /* LTxCameraShootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTxCameraShootViewController.m; sourceTree = "<group>"; };
-		275E4AFB208F053D00A7285C /* LTxCameraVideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTxCameraVideoPlayerView.h; sourceTree = "<group>"; };
-		275E4AFC208F053D00A7285C /* LTxCameraVideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTxCameraVideoPlayerView.m; sourceTree = "<group>"; };
-		275E4AFF208F053D00A7285C /* LTxCameraUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTxCameraUtil.h; sourceTree = "<group>"; };
-		275E4B00208F053D00A7285C /* LTxCameraUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTxCameraUtil.m; sourceTree = "<group>"; };
-		275E4B05208F06E500A7285C /* LTxCameraScanView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTxCameraScanView.h; sourceTree = "<group>"; };
-		275E4B06208F06E500A7285C /* LTxCameraScanView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTxCameraScanView.m; sourceTree = "<group>"; };
-		275E4B0B20919BEB00A7285C /* LTxCameraScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTxCameraScanViewController.h; sourceTree = "<group>"; };
-		275E4B0C20919BEB00A7285C /* LTxCameraScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTxCameraScanViewController.m; sourceTree = "<group>"; };
+		2731BD0E2138CA2800C16BC8 /* MainDemoTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainDemoTableViewController.h; sourceTree = "<group>"; };
+		2731BD0F2138CA2800C16BC8 /* MainDemoTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainDemoTableViewController.m; sourceTree = "<group>"; };
+		2731BD282138D45C00C16BC8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		2731BD292138D45C00C16BC8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		2762E39D208B38C2000504C1 /* CustomCameraDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomCameraDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2762E3A0208B38C2000504C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2762E3A1208B38C2000504C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2762E3A3208B38C2000504C1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2762E3A4208B38C2000504C1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2762E3A7208B38C2000504C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2762E3A9208B38C2000504C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2762E3AC208B38C2000504C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2762E3AE208B38C2000504C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2762E3AF208B38C2000504C1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2762E3C5208B3EAF000504C1 /* LTxCamera.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LTxCamera.bundle; sourceTree = "<group>"; };
-		27F758852093116800142093 /* LTxQRCodeGenerate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTxQRCodeGenerate.h; sourceTree = "<group>"; };
-		27F758862093116800142093 /* LTxQRCodeGenerate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTxQRCodeGenerate.m; sourceTree = "<group>"; };
 		27F758882093121B00142093 /* QRCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
 		27F758892093121B00142093 /* QRCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
-		640470C52108554F00FECCEA /* LTxCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTxCamera.h; sourceTree = "<group>"; };
+		3870E3A8C90DC87B1EF4AC93 /* Pods_CustomCameraDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CustomCameraDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		431ED4C0DA550DAA9BD8234D /* Pods-CustomCameraDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomCameraDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CustomCameraDemo/Pods-CustomCameraDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		B1206666B6E5A3B7A3E067C3 /* Pods-CustomCameraDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomCameraDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomCameraDemo/Pods-CustomCameraDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,52 +42,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01701D5006CAABCC2B485A23 /* Pods_CustomCameraDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		275E4AF6208F053D00A7285C /* CameraShoot */ = {
-			isa = PBXGroup;
-			children = (
-				275E4AF7208F053D00A7285C /* LTxCameraShootToolView.h */,
-				275E4AF8208F053D00A7285C /* LTxCameraShootToolView.m */,
-				275E4AF9208F053D00A7285C /* LTxCameraShootViewController.h */,
-				275E4AFA208F053D00A7285C /* LTxCameraShootViewController.m */,
-				275E4AFB208F053D00A7285C /* LTxCameraVideoPlayerView.h */,
-				275E4AFC208F053D00A7285C /* LTxCameraVideoPlayerView.m */,
-			);
-			path = CameraShoot;
-			sourceTree = "<group>";
-		};
-		275E4AFD208F053D00A7285C /* CameraScan */ = {
-			isa = PBXGroup;
-			children = (
-				275E4B05208F06E500A7285C /* LTxCameraScanView.h */,
-				275E4B06208F06E500A7285C /* LTxCameraScanView.m */,
-				275E4B0B20919BEB00A7285C /* LTxCameraScanViewController.h */,
-				275E4B0C20919BEB00A7285C /* LTxCameraScanViewController.m */,
-				27F758852093116800142093 /* LTxQRCodeGenerate.h */,
-				27F758862093116800142093 /* LTxQRCodeGenerate.m */,
-			);
-			path = CameraScan;
-			sourceTree = "<group>";
-		};
-		275E4AFE208F053D00A7285C /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				275E4AFF208F053D00A7285C /* LTxCameraUtil.h */,
-				275E4B00208F053D00A7285C /* LTxCameraUtil.m */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
 		2762E394208B38C1000504C1 = {
 			isa = PBXGroup;
 			children = (
 				2762E39F208B38C2000504C1 /* CustomCameraDemo */,
 				2762E39E208B38C2000504C1 /* Products */,
+				434173E050A416C1DFC1B310 /* Pods */,
+				8329A0F81A8187B22E0442C7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,11 +70,10 @@
 		2762E39F208B38C2000504C1 /* CustomCameraDemo */ = {
 			isa = PBXGroup;
 			children = (
-				2762E3B6208B38DF000504C1 /* LTxCamera */,
 				2762E3A0208B38C2000504C1 /* AppDelegate.h */,
 				2762E3A1208B38C2000504C1 /* AppDelegate.m */,
-				2762E3A3208B38C2000504C1 /* ViewController.h */,
-				2762E3A4208B38C2000504C1 /* ViewController.m */,
+				2731BD0E2138CA2800C16BC8 /* MainDemoTableViewController.h */,
+				2731BD0F2138CA2800C16BC8 /* MainDemoTableViewController.m */,
 				27F758882093121B00142093 /* QRCodeViewController.h */,
 				27F758892093121B00142093 /* QRCodeViewController.m */,
 				2762E3A6208B38C2000504C1 /* Main.storyboard */,
@@ -136,16 +85,21 @@
 			path = CustomCameraDemo;
 			sourceTree = "<group>";
 		};
-		2762E3B6208B38DF000504C1 /* LTxCamera */ = {
+		434173E050A416C1DFC1B310 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				275E4AFE208F053D00A7285C /* Common */,
-				275E4AF6208F053D00A7285C /* CameraShoot */,
-				275E4AFD208F053D00A7285C /* CameraScan */,
-				2762E3C5208B3EAF000504C1 /* LTxCamera.bundle */,
-				640470C52108554F00FECCEA /* LTxCamera.h */,
+				431ED4C0DA550DAA9BD8234D /* Pods-CustomCameraDemo.debug.xcconfig */,
+				B1206666B6E5A3B7A3E067C3 /* Pods-CustomCameraDemo.release.xcconfig */,
 			);
-			path = LTxCamera;
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8329A0F81A8187B22E0442C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3870E3A8C90DC87B1EF4AC93 /* Pods_CustomCameraDemo.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,9 +109,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2762E3B3208B38C2000504C1 /* Build configuration list for PBXNativeTarget "CustomCameraDemo" */;
 			buildPhases = (
+				7511DF57B2D092059C7589D0 /* [CP] Check Pods Manifest.lock */,
 				2762E399208B38C2000504C1 /* Sources */,
 				2762E39A208B38C2000504C1 /* Frameworks */,
 				2762E39B208B38C2000504C1 /* Resources */,
+				C0567AFC6D2EBBC61E93F0BC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -206,7 +162,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2762E3AD208B38C2000504C1 /* LaunchScreen.storyboard in Resources */,
-				2762E3C6208B3EAF000504C1 /* LTxCamera.bundle in Resources */,
 				2762E3AA208B38C2000504C1 /* Assets.xcassets in Resources */,
 				2762E3A8208B38C2000504C1 /* Main.storyboard in Resources */,
 			);
@@ -214,22 +169,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7511DF57B2D092059C7589D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CustomCameraDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0567AFC6D2EBBC61E93F0BC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CustomCameraDemo/Pods-CustomCameraDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/LTxCamera/LTxCamera.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LTxCamera.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CustomCameraDemo/Pods-CustomCameraDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2762E399208B38C2000504C1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2762E3A5208B38C2000504C1 /* ViewController.m in Sources */,
 				2762E3B0208B38C2000504C1 /* main.m in Sources */,
-				275E4B01208F053D00A7285C /* LTxCameraShootToolView.m in Sources */,
-				275E4B03208F053D00A7285C /* LTxCameraVideoPlayerView.m in Sources */,
-				275E4B04208F053D00A7285C /* LTxCameraUtil.m in Sources */,
-				275E4B0D20919BEB00A7285C /* LTxCameraScanViewController.m in Sources */,
-				275E4B02208F053D00A7285C /* LTxCameraShootViewController.m in Sources */,
 				27F7588A2093121B00142093 /* QRCodeViewController.m in Sources */,
-				27F758872093116800142093 /* LTxQRCodeGenerate.m in Sources */,
+				2731BD102138CA2800C16BC8 /* MainDemoTableViewController.m in Sources */,
 				2762E3A2208B38C2000504C1 /* AppDelegate.m in Sources */,
-				275E4B07208F06E500A7285C /* LTxCameraScanView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +227,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2762E3A7208B38C2000504C1 /* Base */,
+				2731BD282138D45C00C16BC8 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -248,6 +236,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2762E3AC208B38C2000504C1 /* Base */,
+				2731BD292138D45C00C16BC8 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -259,6 +248,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -314,6 +304,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -361,6 +352,7 @@
 		};
 		2762E3B4208B38C2000504C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 431ED4C0DA550DAA9BD8234D /* Pods-CustomCameraDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -376,6 +368,7 @@
 		};
 		2762E3B5208B38C2000504C1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1206666B6E5A3B7A3E067C3 /* Pods-CustomCameraDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

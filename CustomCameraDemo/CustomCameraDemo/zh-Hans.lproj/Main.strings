@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "扫码"; ObjectID = "2jG-du-qzY"; */
+"2jG-du-qzY.text" = "扫码";
+
+/* Class = "UILabel"; text = "拍照/拍摄"; ObjectID = "Tpn-fr-1j9"; */
+"Tpn-fr-1j9.text" = "拍照/拍摄";
+
+/* Class = "UILabel"; text = "生成"; ObjectID = "XzW-Yx-cTq"; */
+"XzW-Yx-cTq.text" = "生成";
+
+/* Class = "UINavigationItem"; title = "LTxCamera"; ObjectID = "Z4e-wt-WzU"; */
+"Z4e-wt-WzU.title" = "LTxCamera";
+
+/* Class = "UITableViewSection"; headerTitle = "    相机"; ObjectID = "kux-6s-enp"; */
+"kux-6s-enp.headerTitle" = "    相机";
+
+/* Class = "UITableViewSection"; headerTitle = "    二维码"; ObjectID = "mrE-6T-7ed"; */
+"mrE-6T-7ed.headerTitle" = "    二维码";
+
+/* Class = "UITableViewSection"; headerTitle = "    相册"; ObjectID = "oHy-VH-K75"; */
+"oHy-VH-K75.headerTitle" = "    相册";
+
+/* Class = "UILabel"; text = "相册"; ObjectID = "vps-JN-u22"; */
+"vps-JN-u22.text" = "相册";
