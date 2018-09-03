@@ -11,6 +11,7 @@
 
 @property (nonatomic, strong) UIImageView* thumbImageView;
 @property (nonatomic, strong) UIButton* selectBtn;
+@property (nonatomic, strong) UIImageView* playImageView;
 
 @end
 
@@ -31,6 +32,7 @@
 -(void)setupLTxCameraAblumContentView{
     [self.contentView addSubview:self.thumbImageView];
     [self.contentView addSubview:self.selectBtn];
+    [self.contentView addSubview:self.playImageView];
     
     
     NSLayoutConstraint* thumbLead = [NSLayoutConstraint constraintWithItem:_thumbImageView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeLeading multiplier:1.f constant:1];
@@ -45,6 +47,11 @@
     NSLayoutConstraint* btnWidth = [NSLayoutConstraint constraintWithItem:_selectBtn attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.f constant:40];
     NSLayoutConstraint* btnHeight = [NSLayoutConstraint constraintWithItem:_selectBtn attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_selectBtn attribute:NSLayoutAttributeWidth multiplier:1.f constant:0];
     [NSLayoutConstraint activateConstraints:@[btnTop,btnTrailing,btnWidth,btnHeight]];
+    
+    
+    NSLayoutConstraint* centerX = [NSLayoutConstraint constraintWithItem:_playImageView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeCenterX multiplier:1.f constant:0];
+    NSLayoutConstraint* centerY = [NSLayoutConstraint constraintWithItem:_playImageView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeCenterY multiplier:1.f constant:0];
+    [NSLayoutConstraint activateConstraints:@[centerX,centerY]];
 }
 
 #pragma mark - Getter
@@ -61,9 +68,18 @@
     if(!_selectBtn){
         _selectBtn = [[UIButton alloc] init];
         _selectBtn.translatesAutoresizingMaskIntoConstraints = NO;
-        [_selectBtn addTarget:self action:@selector(selectBtnPressed) forControlEvents:UIControlEventTouchUpInside];
+        [_selectBtn addTarget:self action:@selector(selectBtnPressed) forControlEvents:UIControlEventTouchDown];
     }
     return _selectBtn;
+}
+
+-(UIImageView*)playImageView{
+    if (!_playImageView) {
+        _playImageView = [[UIImageView alloc] initWithImage:LTxImageWithName(@"ic_video_play")];
+        _playImageView.translatesAutoresizingMaskIntoConstraints = NO;
+        _playImageView.contentMode = UIViewContentModeScaleToFill;
+    }
+    return _playImageView;
 }
 
 #pragma mark - Setter
@@ -77,11 +93,25 @@
     }
     
     PHAsset* asset = model.asset;
+    
+    if (asset.mediaType == PHAssetMediaTypeImage) {
+        self.playImageView.hidden = YES;
+    }else{
+        self.playImageView.hidden = NO;
+    }
+    
     [LTxCameraUtil getPhotoWithAsset:asset width:80 progress:^(double progress, NSError *error, BOOL *stop, NSDictionary *info) {
         
     } completion:^(UIImage *photo, NSDictionary *info, BOOL isDegraded) {
         dispatch_async(dispatch_get_main_queue(), ^{
             self.thumbImageView.image = photo;
+            self.model.thumbImage = photo;
+        });
+    }];
+    
+    [LTxCameraUtil getPhotoWithAsset:asset width:0 progress:nil completion:^(UIImage *photo, NSDictionary *info, BOOL isDegraded) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.model.originalImage = photo;
         });
     }];
     

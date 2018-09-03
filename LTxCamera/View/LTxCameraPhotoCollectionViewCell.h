@@ -15,6 +15,7 @@
 
 @property (nonatomic, strong) LTxCameraAssetModel* model;
 
+
 @property (nonatomic, copy) LTxCameraCallbackBlock selectCallback;
 
 @end

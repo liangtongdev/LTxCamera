@@ -13,14 +13,13 @@
 
 #define  LTxCameraAblumTableViewCellIdentifier @"LTxCameraAblumTableViewCellIdentifier"
 @interface LTxCameraAblumViewController ()
-
+@property (nonatomic, strong) LTxCameraAblumTableViewController* ablumTableVC;
 @end
 
 @implementation LTxCameraAblumViewController
 
 - (instancetype)init{
-    LTxCameraAblumTableViewController* ablumTableVC = [[LTxCameraAblumTableViewController alloc] init];
-    self = [super initWithRootViewController:ablumTableVC];
+    self = [super initWithRootViewController:self.ablumTableVC];
     return self;
 }
 
@@ -36,8 +35,32 @@
     
 }
 
+-(void)setPhotoPickerDataSource:(id<LTxCameraPhotoPickerDataSource>)photoPickerDataSource{
+    _photoPickerDataSource = photoPickerDataSource;
+    self.ablumTableVC.photoPickerDataSource = photoPickerDataSource;
+}
+-(void)setPhotoPickerDelegate:(id<LTxCameraPhotoPickerDelegate>)photoPickerDelegate{
+    _photoPickerDelegate = photoPickerDelegate;
+    self.ablumTableVC.photoPickerDelegate = photoPickerDelegate;
+}
 
+-(void)setMaxImagesCount:(NSInteger)maxImagesCount{
+    _maxImagesCount = maxImagesCount;
+    self.ablumTableVC.maxImagesCount = maxImagesCount;
+}
 
+-(LTxCameraAblumTableViewController*)ablumTableVC{
+    if (!_ablumTableVC) {
+        _ablumTableVC = [[LTxCameraAblumTableViewController alloc] init];
+    }
+    return _ablumTableVC;
+}
+
+-(void)dealloc{
+    _ablumTableVC.photoPickerDataSource = nil;
+    _ablumTableVC.photoPickerDelegate = nil;
+    _ablumTableVC = nil;
+}
 
 @end
 
@@ -47,13 +70,66 @@
 
 @interface LTxCameraAblumTableViewController()
 @property (nonatomic, strong) NSMutableArray* albumList;//相册列表
+@property (nonatomic, strong) UILabel* tipL;//在访问权限受限的情况下，提示信息
+
 @end
 
 @implementation LTxCameraAblumTableViewController : UITableViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self ltxCamera_setupAblumTableView];
-    [self showPhotosInAblum:nil] ;
+    
+    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    //检查权限，如果用户尚未授权使用相册，则弹出授权框
+    PHAuthorizationStatus status = [self photoAuthorizationStatusCheck];
+    if (status == PHAuthorizationStatusNotDetermined) {
+        [self showNotAuthorizationTip];
+    }else if (status == PHAuthorizationStatusRestricted || status == PHAuthorizationStatusDenied){
+        [self showNotAuthorizationTip];
+    }else if (status == PHAuthorizationStatusAuthorized){
+        [self.tipL removeFromSuperview];
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    }
+}
+
+#pragma mark - PhotoAuthorization
+/**
+ * 检查相册权限
+ **/
+-(PHAuthorizationStatus)photoAuthorizationStatusCheck{
+    PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
+    if (status == PHAuthorizationStatusNotDetermined) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus newStatus) {
+                if (newStatus == PHAuthorizationStatusAuthorized) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self.tipL removeFromSuperview];
+                        [self showPhotosInAblum:nil] ;
+                        self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+                    });
+                    [self reloadAlbumTableView];
+                }else{
+                    [self showNotAuthorizationTip];
+                }
+            }];
+        });
+    }else if (status == PHAuthorizationStatusRestricted || status == PHAuthorizationStatusDenied){
+        [self showNotAuthorizationTip];
+    }else if (status == PHAuthorizationStatusAuthorized){
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tipL removeFromSuperview];
+            [self showPhotosInAblum:nil] ;
+        });
+    }
+    return status;
+}
+
+-(void)showNotAuthorizationTip{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSString* appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
+        self.tipL.text = [NSString stringWithFormat:[NSBundle ltxCamera_localizedStringForKey:@"Allow %@ to access your album in \"Settings -> Privacy -> Photos\""],appName];
+    });
 }
 
 #pragma mark - UI
@@ -63,7 +139,7 @@
 -(void)ltxCamera_setupAblumTableView{
     
     self.navigationItem.title = [NSBundle ltxCamera_localizedStringForKey:@"Photos"];
-    UIButton* cancelBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 56, 26)];
+    UIButton* cancelBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 42, 26)];
     [cancelBtn setTitle:[NSBundle ltxCamera_localizedStringForKey:@"Cancel"] forState:UIControlStateNormal];
     [cancelBtn.titleLabel setFont:[UIFont systemFontOfSize:16]];
     [cancelBtn addTarget:self action:@selector(ltxCameraCancelAction) forControlEvents:UIControlEventTouchUpInside];
@@ -92,6 +168,10 @@
 -(void)showPhotosInAblum:(LTxCameraAlbumModel*)album{
     LTxCameraPhotoPickerViewController* photoPicker = [[LTxCameraPhotoPickerViewController alloc] init];
     
+    photoPicker.photoPickerDataSource = self.photoPickerDataSource;
+    photoPicker.photoPickerDelegate = self.photoPickerDelegate;
+    photoPicker.maxImagesCount = self.maxImagesCount < 1 ? 9 : self.maxImagesCount;
+    
     BOOL animate = NO;
     if (album) {
         photoPicker.model = album;
@@ -101,6 +181,16 @@
     }
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.navigationController pushViewController:photoPicker animated:animate];
+    });
+}
+
+/**
+ * 刷新列表
+ **/
+-(void)reloadAlbumTableView{
+    _albumList = [LTxCameraUtil getAllAlbumListWithOpinion:YES];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.tableView reloadData];
     });
 }
 
@@ -131,5 +221,30 @@
     }
     return _albumList;
 }
+
+-(UILabel*)tipL{
+    if (!_tipL) {
+        _tipL = [[UILabel alloc] init];
+        _tipL.textAlignment = NSTextAlignmentCenter;
+        _tipL.translatesAutoresizingMaskIntoConstraints = NO;
+        _tipL.numberOfLines = 0;
+        
+        [self.view addSubview:_tipL];
+        NSLayoutConstraint* centerX = [NSLayoutConstraint constraintWithItem:_tipL attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterX multiplier:1.f constant:0];
+        NSLayoutConstraint* top = [NSLayoutConstraint constraintWithItem:_tipL attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.f constant:100];
+        [NSLayoutConstraint activateConstraints:@[centerX,top]];
+    }
+    return _tipL;
+}
+
+
+-(void)setPhotoPickerDataSource:(id<LTxCameraPhotoPickerDataSource>)photoPickerDataSource{
+    _photoPickerDataSource = photoPickerDataSource;
+}
+-(void)setPhotoPickerDelegate:(id<LTxCameraPhotoPickerDelegate>)photoPickerDelegate{
+    _photoPickerDelegate = photoPickerDelegate;
+}
+
+
 
 @end

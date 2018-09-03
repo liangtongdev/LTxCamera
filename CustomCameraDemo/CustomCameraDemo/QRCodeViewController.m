@@ -18,7 +18,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"QRCode Demo";
+    self.view.backgroundColor = [UIColor colorWithRed:240.0/255.0 green:240.0/255.0 blue:240.0/255.0 alpha:1];
     [LTxQRCodeGenerate fillQRImageWithImageView:_imageView qrString:@"Hello world!"];
+    
+//    UIImage* qrImage = [LTxQRCodeGenerate createQRImageWithString:@"Hello world!" size:240 red:255  green:0 blue:0];
+//    self.imageView.image = qrImage;
 }
 
 - (void)didReceiveMemoryWarning {

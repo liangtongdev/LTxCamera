@@ -274,8 +274,121 @@
     
 }
 
+/**
+ * 获取视频
+ **/
++ (void)exportVideoWithAsset:(PHAsset *)asset presetName:(NSString*)presetName completion:(LTxCameraPathAndStringCallbackBlock)completion{
+    if (!presetName) {
+        presetName = AVAssetExportPreset640x480;
+    }
+    PHVideoRequestOptions* options = [[PHVideoRequestOptions alloc] init];
+    options.version = PHVideoRequestOptionsVersionOriginal;
+    options.deliveryMode = PHVideoRequestOptionsDeliveryModeAutomatic;
+    options.networkAccessAllowed = YES;
+    [[PHImageManager defaultManager] requestAVAssetForVideo:asset options:options resultHandler:^(AVAsset* avasset, AVAudioMix* audioMix, NSDictionary* info){
+        // NSLog(@"Info:\n%@",info);
+        AVURLAsset *videoAsset = (AVURLAsset*)avasset;
+        // NSLog(@"AVAsset URL: %@",myAsset.URL);
+        NSArray *presets = [AVAssetExportSession exportPresetsCompatibleWithAsset:videoAsset];
+        if ([presets containsObject:presetName]) {
+            AVAssetExportSession *session = [[AVAssetExportSession alloc] initWithAsset:videoAsset presetName:presetName];
+            
+            NSDateFormatter *formater = [[NSDateFormatter alloc] init];
+            [formater setDateFormat:@"yyyy-MM-dd-HH:mm:ss-SSS"];
+            NSString *outputPath = [NSHomeDirectory() stringByAppendingFormat:@"/tmp/output-%@.mp4", [formater stringFromDate:[NSDate date]]];
+            // NSLog(@"video outputPath = %@",outputPath);
+            session.outputURL = [NSURL fileURLWithPath:outputPath];
+            
+            // Optimize for network use.
+            session.shouldOptimizeForNetworkUse = true;
+            
+            NSArray *supportedTypeArray = session.supportedFileTypes;
+            if ([supportedTypeArray containsObject:AVFileTypeMPEG4]) {
+                session.outputFileType = AVFileTypeMPEG4;
+            } else if (supportedTypeArray.count == 0) {
+                if (completion) {
+                    completion(nil, @"视频类型暂不支持导出");
+                }
+                return;
+            } else {
+                session.outputFileType = [supportedTypeArray objectAtIndex:0];
+            }
+            
+            if (![[NSFileManager defaultManager] fileExistsAtPath:[NSHomeDirectory() stringByAppendingFormat:@"/tmp"]]) {
+                [[NSFileManager defaultManager] createDirectoryAtPath:[NSHomeDirectory() stringByAppendingFormat:@"/tmp"] withIntermediateDirectories:YES attributes:nil error:nil];
+            }
+            
+            
+            // Begin to export video to the output path asynchronously.
+            [session exportAsynchronouslyWithCompletionHandler:^(void) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    switch (session.status) {
+                        case AVAssetExportSessionStatusUnknown: {
+                        }  break;
+                        case AVAssetExportSessionStatusWaiting: {
+                        }  break;
+                        case AVAssetExportSessionStatusExporting: {
+                        }  break;
+                        case AVAssetExportSessionStatusCompleted: {
+                            if (completion) {
+                                completion(outputPath, nil);
+                            }
+                        }  break;
+                        case AVAssetExportSessionStatusFailed: {
+                            
+                            if (completion) {
+                                completion(nil, session.error.description);
+                            }
+                        }  break;
+                        case AVAssetExportSessionStatusCancelled: {
+                            if (completion) {
+                                completion(nil, @"导出任务已被取消");
+                            }
+                        }  break;
+                        default: break;
+                    }
+                });
+            }];
+        }else{//当前设备不支持该预presetName
+            if (completion) {
+                completion(nil, @"当前设备不支持该预presetName");
+            }
+        }
+    }];
+}
 
 
+/**
+ * 获取图片
+ **/
++ (void)exportImage:(UIImage *)image completion:(LTxCameraPathAndStringCallbackBlock)completion{
+    NSData *data = UIImageJPEGRepresentation(image, 0.9);
+    NSDateFormatter *formater = [[NSDateFormatter alloc] init];
+    [formater setDateFormat:@"yyyy-MM-dd-HH:mm:ss-SSS"];
+    NSString *outputPath = [NSHomeDirectory() stringByAppendingFormat:@"/tmp/output-%@.jpeg", [formater stringFromDate:[NSDate date]]];
+    BOOL finish = [data writeToFile:outputPath atomically:YES];
+    if (finish) {
+        if (completion) {
+            completion(outputPath,nil);
+        }
+    }else{
+        if (completion) {
+            completion(nil,nil);
+        }
+    }
+}
+
+
+/**
+ * 获取视频播放源 AVPlayerItem
+ **/
++ (void)getVideoPlayerItemWithAsset:(PHAsset *)asset completion:(LTxCameraAVPlayerItemAndDictionaryCallbackBlock)completion{
+    PHVideoRequestOptions *option = [[PHVideoRequestOptions alloc] init];
+    option.networkAccessAllowed = YES;
+    [[PHImageManager defaultManager] requestPlayerItemForVideo:asset options:option resultHandler:^(AVPlayerItem *playerItem, NSDictionary *info) {
+        if (completion) completion(playerItem,info);
+    }];
+}
 
 #pragma mark - Tool
 

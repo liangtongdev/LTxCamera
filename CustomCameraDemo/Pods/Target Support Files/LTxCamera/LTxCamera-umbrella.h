@@ -12,6 +12,9 @@
 
 #import "LTxCameraAblumViewController.h"
 #import "LTxCameraPhotoPickerViewController.h"
+#import "LTxCameraPreviewPageViewController.h"
+#import "LTxCameraPreviewViewController.h"
+#import "LTxCameraPhotoPickerProtocol.h"
 #import "LTxCameraUtil.h"
 #import "NSBundle+LTxCamera.h"
 #import "LTxCamera.h"
@@ -22,10 +25,11 @@
 #import "LTxQRCodeGenerate.h"
 #import "LTxCameraShootToolView.h"
 #import "LTxCameraShootViewController.h"
-#import "LTxCameraVideoPlayerView.h"
 #import "LTxCameraAblumTableViewCell.h"
 #import "LTxCameraPhotoCollectionViewCell.h"
 #import "LTxCameraPhotoPickerToolBar.h"
+#import "LTxCameraVideoPlayerView.h"
+#import "LTxCameraWaitingView.h"
 
 FOUNDATION_EXPORT double LTxCameraVersionNumber;
 FOUNDATION_EXPORT const unsigned char LTxCameraVersionString[];

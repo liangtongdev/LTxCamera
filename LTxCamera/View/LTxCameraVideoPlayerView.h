@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 /**
  * 视频播放画面
+ * 视频循环播放，仿微信录视频
  **/
 @interface LTxCameraVideoPlayerView : UIView
 

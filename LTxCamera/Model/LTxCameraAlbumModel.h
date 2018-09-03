@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LTxCameraUtil.h"
+#import <Photos/Photos.h>
 
 /***
  * 相册
@@ -18,5 +18,5 @@
 @property (nonatomic, assign) NSInteger count;       ///< Count of photos the album contain
 @property (nonatomic, strong) PHFetchResult *result;
 
-@property (nonatomic, strong) NSArray *models;
+@property (nonatomic, strong) NSMutableArray *models;
 @end

@@ -7,7 +7,7 @@
 
 #import "MainDemoTableViewController.h"
 #import "LTxCamera.h"
-@interface MainDemoTableViewController ()
+@interface MainDemoTableViewController ()<LTxCameraPhotoPickerDelegate>
 
 @end
 
@@ -40,6 +40,8 @@
         });
     }else if ([identifier isEqualToString:@"ablum"]){
         LTxCameraAblumViewController* ablumVC = [[LTxCameraAblumViewController alloc] init];
+        ablumVC.photoPickerDelegate = self;
+        ablumVC.maxImagesCount  =  9;
         dispatch_async(dispatch_get_main_queue(), ^{
             [self presentViewController:ablumVC animated:YES completion:nil];
         });
@@ -48,5 +50,9 @@
     }
 }
 
+
+-(void)ltxCamera_photoPickerDidFinishPickingPhotos:(NSArray<UIImage *> *)photos thumbPhotos:(NSArray<UIImage *> *)thumbPhotos paths:(NSArray<NSString*>*)paths sourceAssets:(NSArray *)assets isSelectOriginalPhoto:(BOOL)isSelectOriginalPhoto{
+    
+}
 
 @end

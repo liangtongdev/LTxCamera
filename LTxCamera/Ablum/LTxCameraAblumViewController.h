@@ -12,6 +12,12 @@
  **/
 @interface LTxCameraAblumViewController : UINavigationController
 
+//协议
+@property (nonatomic, weak) id<LTxCameraPhotoPickerDelegate> photoPickerDelegate;
+@property (nonatomic, weak) id<LTxCameraPhotoPickerDataSource> photoPickerDataSource;
+
+@property (nonatomic, assign) NSInteger maxImagesCount;
+
 @end
 
 /**
@@ -19,6 +25,8 @@
  * 没有权限的情况下，展示一句提示信息
  * 有权限的情况下，展示相册列表
  **/
-@interface LTxCameraAblumTableViewController : UITableViewController
-
+@interface LTxCameraAblumTableViewController : UITableViewController//协议
+@property (nonatomic, weak) id<LTxCameraPhotoPickerDelegate> photoPickerDelegate;
+@property (nonatomic, weak) id<LTxCameraPhotoPickerDataSource> photoPickerDataSource;
+@property (nonatomic, assign) NSInteger maxImagesCount;
 @end

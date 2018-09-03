@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     s.name         = "LTxCamera"
-    s.version      = "0.0.5"
-    s.summary      = "拍照，小视频，扫码，二维码生成"
+    s.version      = "0.0.6"
+    s.summary      = "相册，拍照，小视频，扫码，二维码生成"
     s.license      = "MIT"
     s.author             = { "liangtong" => "liangtongdev@163.com" }
     
@@ -45,12 +45,14 @@ Pod::Spec.new do |s|
         shoot.source_files  =  "LTxCamera/Shoot/*.{h,m}"
         shoot.public_header_files = "LTxCamera/Shoot/*.h"
         shoot.dependency 'LTxCamera/Common'
+        shoot.dependency 'LTxCamera/View'
     end
     # 相册
     s.subspec 'Ablum' do |ablum|
         ablum.source_files  =  "LTxCamera/Ablum/*.{h,m}"
         ablum.public_header_files = "LTxCamera/Ablum/*.h"
         ablum.dependency 'LTxCamera/Common'
+        ablum.dependency 'LTxCamera/View'
     end
     
     # 公开
@@ -60,6 +62,7 @@ Pod::Spec.new do |s|
         core.dependency 'LTxCamera/Scan'
         core.dependency 'LTxCamera/Shoot'
         core.dependency 'LTxCamera/Ablum'
+        core.dependency 'LTxCamera/View'
     end
     
 end

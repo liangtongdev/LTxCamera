@@ -190,7 +190,7 @@
     CGFloat right = rect.size.width / 2 + LTX_CAMERA_QRCODE_SCAN_VIEW_SIZE / 2;
     
     /// 空白区域设置
-    [[[UIColor blackColor] colorWithAlphaComponent:0.3] setFill];
+    [[[UIColor blackColor] colorWithAlphaComponent:0.5] setFill];
     UIRectFill(rect);
     // 获取上下文，并设置混合模式 -> kCGBlendModeDestinationOut
     CGContextRef context = UIGraphicsGetCurrentContext();
