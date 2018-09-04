@@ -51,7 +51,7 @@
 }
 
 
--(void)ltxCamera_photoPickerDidFinishPickingPhotos:(NSArray<UIImage *> *)photos thumbPhotos:(NSArray<UIImage *> *)thumbPhotos paths:(NSArray<NSString*>*)paths sourceAssets:(NSArray *)assets isSelectOriginalPhoto:(BOOL)isSelectOriginalPhoto{
+-(void)ltxCamera_photoPickerDidFinishPickingPhotos:(NSArray<UIImage *> *)photos paths:(NSArray<NSString*>*)paths sourceAssets:(NSArray *)assets{
     
 }
 

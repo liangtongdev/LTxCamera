@@ -10,7 +10,7 @@ LTxCamera is available in CocoaPods, specify it in your *Podfile*:
 
 
 ```Objective-C
-    pod ‘LTxCamera’
+   pod 'LTxCamera'
 ```
 
 ## Deployment
@@ -37,10 +37,10 @@ LTxCamera is available in CocoaPods, specify it in your *Podfile*:
         });
 ```
 
-回调包含缩略图、原图、文件地址
+回调包含图片、文件地址
 
 ```Objective-C
--(void)ltxCamera_photoPickerDidFinishPickingPhotos:(NSArray<UIImage *> *)photos thumbPhotos:(NSArray<UIImage *> *)thumbPhotos paths:(NSArray<NSString*>*)paths sourceAssets:(NSArray *)assets isSelectOriginalPhoto:(BOOL)isSelectOriginalPhoto{
+-(void)ltxCamera_photoPickerDidFinishPickingPhotos:(NSArray<UIImage *> *)photos paths:(NSArray<NSString*>*)paths sourceAssets:(NSArray *)assets{
     
 }
 ```
