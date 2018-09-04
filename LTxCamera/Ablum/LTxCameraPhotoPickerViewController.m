@@ -20,7 +20,7 @@
 @property (nonatomic, strong) NSMutableArray* selectAssets;
 
 //信号量，单线程执行
-@property (nonatomic, strong) dispatch_semaphore_t semaphore;//信号量，用于限制最大上传个数
+@property (nonatomic, strong) dispatch_semaphore_t semaphore;//信号量，用于导出文件并排序
 @property (nonatomic, strong) dispatch_queue_t queue;//信号队列
 
 @end
@@ -86,6 +86,7 @@
     __weak __typeof(self) weakSelf = self;
     LTxCameraPreviewPageViewController* pageVC = [[LTxCameraPreviewPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     pageVC.maxImagesCount = self.maxImagesCount;
+    pageVC.useOriginalPhoto = self.toolBar.useOriginalPhoto;
     if (index == -1) {
         pageVC.models = _selectAssets;
         pageVC.selectedIndex = 0;
@@ -94,7 +95,8 @@
         pageVC.selectedIndex = index;
     }
     
-    pageVC.okCallback = ^{
+    pageVC.okCallback = ^(BOOL useOriginalPhoto){
+        weakSelf.toolBar.useOriginalPhoto = useOriginalPhoto;
         [weakSelf ltxCamera_updateToolbar];
         [weakSelf ltxCamera_finishAction];
     };
@@ -116,12 +118,16 @@
     
     [self.waitingView show];
     
-    BOOL export = YES;
-    if ([self.photoPickerDataSource respondsToSelector:@selector(ltx_cameraExportPickerFiles)]) {
-        export = [self.photoPickerDataSource ltx_cameraExportPickerFiles];
+    CGFloat compressionQuality;
+    if (_toolBar.useOriginalPhoto) {
+        compressionQuality = 1.0f;
+    }else{
+        compressionQuality = 0.8f;
+    }
+    if ([self.photoPickerDataSource respondsToSelector:@selector(ltxCamera_exportImageCompressionQuality)]) {
+        compressionQuality = [self.photoPickerDataSource ltxCamera_exportImageCompressionQuality];
     }
     
-    NSMutableArray* thumbPhotos = [[NSMutableArray alloc] init];
     NSMutableArray* photos = [[NSMutableArray alloc] init];
     NSMutableArray* paths = [[NSMutableArray alloc] init];
     if (!_semaphore) {
@@ -135,57 +141,46 @@
         PHAsset* asset = model.asset;
         dispatch_async(_queue, ^{
             dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
-            NSLog(@"开始导出照片/视频");
-            //第一步，首先获取照片
-            if (model.thumbImage) {
-                [thumbPhotos addObject:model.thumbImage];
-            }
-            if (model.originalImage) {
-                [photos addObject:model.originalImage];
-                
-                if (!export) {
+//            NSLog(@"开始导出照片/视频");
+            if (asset.mediaType == PHAssetMediaTypeImage) {
+                [LTxCameraUtil exportImageWithAsset:asset compressionQuality:compressionQuality completion:^(UIImage *image, NSString *outputPath, NSString *errorTips) {
+                    if (image) {
+                        [photos addObject:image];
+                    }
+                    if (outputPath) {
+                        [paths addObject:outputPath];
+                    }
                     dispatch_async(dispatch_get_main_queue(), ^{
                         dispatch_semaphore_signal(self.semaphore);
                     });
-                    return ;
-                }
-                
-                //第二步，导出地址
-                if (asset.mediaType == PHAssetMediaTypeImage) {
-                    [LTxCameraUtil exportImage:model.originalImage completion:^(NSString * path, NSString *error) {
-                        __strong __typeof(weakSelf)strongSelf = weakSelf;
-                        if (path) {
-                            [paths addObject:path];
-                        }
-                        NSLog(@"结束导出照片:%@",path);
-                        dispatch_async(dispatch_get_main_queue(), ^{
-                            dispatch_semaphore_signal(strongSelf.semaphore);
-                        });
-                    }];
-                }else{
-                    [LTxCameraUtil exportVideoWithAsset:asset presetName:nil completion:^(NSString* path, NSString *error) {
-                        __strong __typeof(weakSelf)strongSelf = weakSelf;
-                        if (path) {
-                            [paths addObject:path];
-                        }
-                        NSLog(@"开始导出视频:%@",path);
-                        dispatch_async(dispatch_get_main_queue(), ^{
-                            dispatch_semaphore_signal(strongSelf.semaphore);
-                        });
-                    }];
-                }
+                }];
+            }else{
+                [LTxCameraUtil exportVideoWithAsset:asset presetName:nil completion:^(NSString* path, NSString *error) {
+                    __strong __typeof(weakSelf)strongSelf = weakSelf;
+                    if (model.thumbImage) {
+                        [photos addObject:model.thumbImage];
+                    }
+                    if (path) {
+                        [paths addObject:path];
+                    }
+//                    NSLog(@"开始导出视频:%@",path);
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        dispatch_semaphore_signal(strongSelf.semaphore);
+                    });
+                }];
             }
+            
         });
     }//end for
     
     dispatch_async(_queue, ^{
         dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
-        NSLog(@"完成1");
+//        NSLog(@"完成1");
         //信号量等待
-        if ([self.photoPickerDelegate respondsToSelector:@selector(ltxCamera_photoPickerDidFinishPickingPhotos:thumbPhotos:paths:sourceAssets:isSelectOriginalPhoto:)]) {
-            [self.photoPickerDelegate ltxCamera_photoPickerDidFinishPickingPhotos:photos thumbPhotos:thumbPhotos paths:paths sourceAssets:self.selectAssets isSelectOriginalPhoto:self.toolBar.useOriginalPhoto];
+        if ([self.photoPickerDelegate respondsToSelector:@selector(ltxCamera_photoPickerDidFinishPickingPhotos:paths:sourceAssets:)]) {
+            [self.photoPickerDelegate ltxCamera_photoPickerDidFinishPickingPhotos:photos paths:paths sourceAssets:self.selectAssets];
         }
-        NSLog(@"完成2");
+//        NSLog(@"完成2");
         dispatch_async(dispatch_get_main_queue(), ^{
             dispatch_semaphore_signal(self.semaphore);
             [self.waitingView hide];

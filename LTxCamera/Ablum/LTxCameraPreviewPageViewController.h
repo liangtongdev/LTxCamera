@@ -16,6 +16,8 @@
 @property (nonatomic, assign) NSInteger selectedIndex;
 @property (nonatomic, assign) NSInteger maxImagesCount;
 
-@property (nonatomic, copy) LTxCameraCallbackBlock okCallback;
+@property (nonatomic, assign) BOOL useOriginalPhoto;
+
+@property (nonatomic, copy) LTxCameraBOOLCallbackBlock okCallback;
 
 @end

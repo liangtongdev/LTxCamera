@@ -28,7 +28,9 @@
 #import "LTxCameraAblumTableViewCell.h"
 #import "LTxCameraPhotoCollectionViewCell.h"
 #import "LTxCameraPhotoPickerToolBar.h"
+#import "LTxCameraPhotoPreviewToolbar.h"
 #import "LTxCameraVideoPlayerView.h"
+#import "LTxCameraViewPreviewView.h"
 #import "LTxCameraWaitingView.h"
 
 FOUNDATION_EXPORT double LTxCameraVersionNumber;

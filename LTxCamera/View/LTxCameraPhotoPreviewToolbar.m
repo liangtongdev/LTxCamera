@@ -16,14 +16,14 @@
 #define DONE_BACKGROUND_COLOR [UIColor colorWithRed:(80/255.0) green:(180/255.0)  blue:0 alpha:1.0]
 @implementation LTxCameraPhotoPreviewToolbar
 
-- (void)drawRect:(CGRect)rect {
-    
-    if (!_originalBtn) {
+- (instancetype)init{
+    self = [super init];
+    if (self) {
         [self addSubview:self.originalBtn];
         [self addSubview:self.okBtn];
         [self ltxCamera_addConstraintOnToobar];
     }
-    
+    return self;
 }
 
 /**

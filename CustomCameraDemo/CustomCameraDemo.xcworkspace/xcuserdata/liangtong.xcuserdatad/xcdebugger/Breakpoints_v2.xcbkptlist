@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../LTxCamera/Common/LTxCameraUtil.m"
-            timestampString = "557652412.070424"
+            timestampString = "557729892.987486"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "269"
-            endingLineNumber = "269"
-            landmarkName = "+getPhotoWithAsset:width:progress:completion:"
+            startingLineNumber = "262"
+            endingLineNumber = "262"
+            landmarkName = "+getPhotoWithAsset:width:completion:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

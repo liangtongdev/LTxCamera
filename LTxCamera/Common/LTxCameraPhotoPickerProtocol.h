@@ -11,11 +11,12 @@
 @protocol LTxCameraPhotoPickerDataSource <NSObject>
 
 @optional
+
 /**
- * 是否需要导出文档
- * 如果不实现，则表示导出
- **/
--(BOOL)ltx_cameraExportPickerFiles;
+ * 压缩质量
+ * 默认情况下，为1.0，低质量为0.8
+ ***/
+-(CGFloat)ltxCamera_exportImageCompressionQuality;
 
 @end
 
@@ -31,6 +32,6 @@
 /**
  * 完成后的回调
  **/
--(void)ltxCamera_photoPickerDidFinishPickingPhotos:(NSArray<UIImage *> *)photos thumbPhotos:(NSArray<UIImage *> *)thumbPhotos paths:(NSArray<NSString*>*)paths sourceAssets:(NSArray *)assets isSelectOriginalPhoto:(BOOL)isSelectOriginalPhoto;
+-(void)ltxCamera_photoPickerDidFinishPickingPhotos:(NSArray<UIImage *> *)photos paths:(NSArray<NSString*>*)paths sourceAssets:(NSArray *)assets ;
 
 @end

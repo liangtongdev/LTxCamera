@@ -46,14 +46,16 @@
     [nameString appendAttributedString:countString];
     self.nameL.attributedText = nameString;
     
-    PHAsset* asset = [model.result lastObject];
-    [LTxCameraUtil getPhotoWithAsset:asset width:80 progress:^(double progress, NSError *error, BOOL *stop, NSDictionary *info) {
-        
-    } completion:^(UIImage *photo, NSDictionary *info, BOOL isDegraded) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.thumbImageView.image = photo;
-        });
-    }];
+    if (model.thumbImage) {
+        self.thumbImageView.image = model.thumbImage;
+    }else{
+        PHAsset* asset = [model.result lastObject];
+        [LTxCameraUtil getPhotoWithAsset:asset width:80 completion:^(UIImage *photo, NSDictionary *info, BOOL isDegraded) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.thumbImageView.image = photo;
+            });
+        }];
+    }
 }
 
 

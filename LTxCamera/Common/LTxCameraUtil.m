@@ -217,7 +217,7 @@
 /**
  * 获取相片
  **/
-+ (void)getPhotoWithAsset:(PHAsset *)asset width:(CGFloat)width progress:(void (^)(double progress, NSError *error, BOOL *stop, NSDictionary *info))downloadProgress completion:(void (^)(UIImage *photo,NSDictionary *info,BOOL isDegraded))completion{
++ (void)getPhotoWithAsset:(PHAsset *)asset width:(CGFloat)width completion:(void (^)(UIImage *photo,NSDictionary *info,BOOL isDegraded))completion{
     CGSize imageSize;
     if (width <= 0){
        imageSize = CGSizeMake(asset.pixelWidth, asset.pixelHeight);
@@ -251,13 +251,6 @@
         // Download image from iCloud / 从iCloud下载图片
         if ([info objectForKey:PHImageResultIsInCloudKey] && !result) {
             PHImageRequestOptions *options = [[PHImageRequestOptions alloc] init];
-            options.progressHandler = ^(double progress, NSError *error, BOOL *stop, NSDictionary *info) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    if (downloadProgress) {
-                        downloadProgress(progress, error, stop, info);
-                    }
-                });
-            };
             options.networkAccessAllowed = YES;
             options.resizeMode = PHImageRequestOptionsResizeModeFast;
             [[PHImageManager defaultManager] requestImageDataForAsset:asset options:options resultHandler:^(NSData *imageData, NSString *dataUTI, UIImageOrientation orientation, NSDictionary *info) {
@@ -361,8 +354,8 @@
 /**
  * 获取图片
  **/
-+ (void)exportImage:(UIImage *)image completion:(LTxCameraPathAndStringCallbackBlock)completion{
-    NSData *data = UIImageJPEGRepresentation(image, 0.9);
++ (void)exportImage:(UIImage *)image compressionQuality:(CGFloat)compressionQuality completion:(LTxCameraPathAndStringCallbackBlock)completion{
+    NSData *data = UIImageJPEGRepresentation(image, compressionQuality);
     NSDateFormatter *formater = [[NSDateFormatter alloc] init];
     [formater setDateFormat:@"yyyy-MM-dd-HH:mm:ss-SSS"];
     NSString *outputPath = [NSHomeDirectory() stringByAppendingFormat:@"/tmp/output-%@.jpeg", [formater stringFromDate:[NSDate date]]];
@@ -376,6 +369,28 @@
             completion(nil,nil);
         }
     }
+}
+
+/**
+ * 获取图片
+ * 压缩质量
+ **/
++ (void)exportImageWithAsset:(PHAsset *)asset compressionQuality:(CGFloat)compressionQuality completion:(LTxCameraImagePathAndStringCallbackBlock)completion{
+    [LTxCameraUtil getPhotoWithAsset:asset width:0 completion:^(UIImage *photo, NSDictionary *info, BOOL isDegraded) {
+        if (!isDegraded && photo) {
+            [LTxCameraUtil exportImage:photo compressionQuality:compressionQuality completion:^(NSString *outputPath, NSString *errorTips) {
+                if (completion) {
+                    if (!errorTips) {
+                        UIImage* compressImage = [UIImage imageWithContentsOfFile:outputPath];
+                        completion(compressImage,outputPath,nil);
+                    }else{
+                        completion(nil,nil,errorTips);
+                    }
+                }
+                
+            }];
+        }
+    }];
 }
 
 

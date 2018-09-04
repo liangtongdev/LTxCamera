@@ -100,20 +100,27 @@
         self.playImageView.hidden = NO;
     }
     
-    [LTxCameraUtil getPhotoWithAsset:asset width:80 progress:^(double progress, NSError *error, BOOL *stop, NSDictionary *info) {
-        
-    } completion:^(UIImage *photo, NSDictionary *info, BOOL isDegraded) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.thumbImageView.image = photo;
-            self.model.thumbImage = photo;
-        });
-    }];
+    if (model.thumbImage) {
+        self.thumbImageView.image = model.thumbImage;
+    }else{
+        [LTxCameraUtil getPhotoWithAsset:asset width:80 completion:^(UIImage *photo, NSDictionary *info, BOOL isDegraded) {
+                model.thumbImage = photo;
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    self.thumbImageView.image = photo;
+                });
+        }];
+    }
     
-    [LTxCameraUtil getPhotoWithAsset:asset width:0 progress:nil completion:^(UIImage *photo, NSDictionary *info, BOOL isDegraded) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.model.originalImage = photo;
-        });
-    }];
+
+    
+    //获取原图的话，内存直接飙升，此处实现T.B.D。在点击原图的时候，再获取
+    //同样，缩略图也不进行存储。
+    
+//    [LTxCameraUtil getPhotoWithAsset:asset width:0 progress:nil completion:^(UIImage *photo, NSDictionary *info, BOOL isDegraded) {
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            self.model.originalImage = photo;
+//        });
+//    }];
     
 }
 

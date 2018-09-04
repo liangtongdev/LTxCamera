@@ -21,9 +21,11 @@
 typedef void (^LTxCameraBOOLAndPHAssetCallbackBlock)(BOOL,PHAsset *);
 typedef void (^LTxCameraImageURLAndPHAssetCallbackBlock)(UIImage*,NSURL*,PHAsset *);
 typedef void (^LTxCameraPathAndStringCallbackBlock)(NSString*,NSString *);
+typedef void (^LTxCameraImagePathAndStringCallbackBlock)(UIImage*,NSString*,NSString *);
 typedef void (^LTxCameraAVPlayerItemAndDictionaryCallbackBlock)(AVPlayerItem*,NSDictionary *);
 typedef void (^LTxCameraStringCallbackBlock)(NSString *);
 typedef void (^LTxCameraCallbackBlock)(void);
+typedef void (^LTxCameraBOOLCallbackBlock)(BOOL);
 
 @interface LTxCameraUtil : NSObject
 
@@ -72,7 +74,7 @@ typedef void (^LTxCameraCallbackBlock)(void);
 /**
  * 获取相片
  **/
-+ (void)getPhotoWithAsset:(PHAsset *)asset width:(CGFloat)width progress:(void (^)(double progress, NSError *error, BOOL *stop, NSDictionary *info))downloadProgress completion:(void (^)(UIImage *photo,NSDictionary *info,BOOL isDegraded))completion;
++ (void)getPhotoWithAsset:(PHAsset *)asset width:(CGFloat)width completion:(void (^)(UIImage *photo,NSDictionary *info,BOOL isDegraded))completion;
 
 /**
  * 获取视频
@@ -83,7 +85,13 @@ typedef void (^LTxCameraCallbackBlock)(void);
 /**
  * 获取图片
  **/
-+ (void)exportImage:(UIImage *)image completion:(LTxCameraPathAndStringCallbackBlock)completion;
++ (void)exportImage:(UIImage *)image compressionQuality:(CGFloat)compressionQuality completion:(LTxCameraPathAndStringCallbackBlock)completion;
+
+/**
+ * 获取图片
+ * 压缩质量
+ **/
++ (void)exportImageWithAsset:(PHAsset *)asset compressionQuality:(CGFloat)compressionQuality completion:(LTxCameraImagePathAndStringCallbackBlock)completion;
 
 /**
  * 获取视频播放源 AVPlayerItem

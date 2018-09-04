@@ -22,15 +22,15 @@
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    
-    if (!_previewBtn) {
+- (instancetype)init {
+    self = [super init];
+    if (self) {
         [self addSubview:self.previewBtn];
         [self addSubview:self.originalBtn];
         [self addSubview:self.okBtn];
         [self ltxCamera_addConstraintOnToobar];
     }
-    
+    return self;
 }
 
 /**

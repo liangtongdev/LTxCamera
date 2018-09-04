@@ -24,7 +24,7 @@
     __weak __typeof(self) weakSelf = self;
     _toolBar.okCallback = ^{
         if (weakSelf.okCallback) {
-            weakSelf.okCallback();
+            weakSelf.okCallback(weakSelf.toolBar.useOriginalPhoto);
         }
     };
 }
@@ -71,6 +71,7 @@
     [NSLayoutConstraint activateConstraints:@[toolLeading,toolTrailing,toolBottom,toolHeight]];
     
     [self ltxCamera_updateToolbar];
+    self.toolBar.useOriginalPhoto = _useOriginalPhoto;
 }
 
 

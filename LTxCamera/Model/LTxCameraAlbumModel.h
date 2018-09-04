@@ -14,9 +14,12 @@
  **/
 @interface LTxCameraAlbumModel : NSObject
 
-@property (nonatomic, strong) NSString *name;        ///< The album name
-@property (nonatomic, assign) NSInteger count;       ///< Count of photos the album contain
+@property (nonatomic, strong) NSString *name;        
+@property (nonatomic, assign) NSInteger count;
 @property (nonatomic, strong) PHFetchResult *result;
 
 @property (nonatomic, strong) NSMutableArray *models;
+
+
+@property (nonatomic, strong) UIImage* thumbImage;
 @end

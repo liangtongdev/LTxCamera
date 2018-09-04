@@ -12,6 +12,5 @@
 @property (nonatomic, strong) PHAsset *asset;
 @property (nonatomic, assign) BOOL isSelected;
 @property (nonatomic, strong) UIImage* thumbImage;
-@property (nonatomic, strong) UIImage* originalImage;
 
 @end

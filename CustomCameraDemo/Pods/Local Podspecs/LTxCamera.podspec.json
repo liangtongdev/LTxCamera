@@ -1,7 +1,7 @@
 {
   "name": "LTxCamera",
-  "version": "0.0.5",
-  "summary": "拍照，小视频，扫码，二维码生成",
+  "version": "0.0.6",
+  "summary": "相册，拍照，小视频，扫码，二维码生成",
   "license": "MIT",
   "authors": {
     "liangtong": "liangtongdev@163.com"
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/liangtongdev/LTxCamera.git",
-    "tag": "0.0.5"
+    "tag": "0.0.6"
   },
   "frameworks": [
     "Foundation",
@@ -62,6 +62,9 @@
       "dependencies": {
         "LTxCamera/Common": [
 
+        ],
+        "LTxCamera/View": [
+
         ]
       }
     },
@@ -71,6 +74,9 @@
       "public_header_files": "LTxCamera/Ablum/*.h",
       "dependencies": {
         "LTxCamera/Common": [
+
+        ],
+        "LTxCamera/View": [
 
         ]
       }
@@ -87,6 +93,9 @@
 
         ],
         "LTxCamera/Ablum": [
+
+        ],
+        "LTxCamera/View": [
 
         ]
       }
