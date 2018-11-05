@@ -17,7 +17,7 @@
 #import "LTxCameraAlbumModel.h"//相册
 #import "LTxCameraAssetModel.h"//相片
 
-#define LTxImageWithName(imageName)  [UIImage imageWithContentsOfFile: [[NSBundle bundleForClass:[self class]] pathForResource:[NSString stringWithFormat:@"LTxCamera.bundle/%@",imageName] ofType:@"png"]]
+#define LTxCameraImageWithName(imageName)  [UIImage imageWithContentsOfFile: [[NSBundle bundleForClass:[self class]] pathForResource:[NSString stringWithFormat:@"LTxCamera.bundle/%@",imageName] ofType:@"png"]]
 typedef void (^LTxCameraBOOLAndPHAssetCallbackBlock)(BOOL,PHAsset *);
 typedef void (^LTxCameraImageURLAndPHAssetCallbackBlock)(UIImage*,NSURL*,PHAsset *);
 typedef void (^LTxCameraPathAndStringCallbackBlock)(NSString*,NSString *);

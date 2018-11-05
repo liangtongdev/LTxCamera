@@ -79,8 +79,8 @@
         _originalBtn.translatesAutoresizingMaskIntoConstraints = NO;
         [_originalBtn.titleLabel setFont:[UIFont systemFontOfSize:15]];
         [_originalBtn setTitle:[NSString stringWithFormat:@"  %@",[NSBundle ltxCamera_localizedStringForKey:@"Full image"]] forState:UIControlStateNormal];
-        [_originalBtn setImage:LTxImageWithName(@"ic_photo_original_sel") forState:UIControlStateSelected];
-        [_originalBtn setImage:LTxImageWithName(@"ic_photo_original_def") forState:UIControlStateNormal];
+        [_originalBtn setImage:LTxCameraImageWithName(@"ic_photo_original_sel") forState:UIControlStateSelected];
+        [_originalBtn setImage:LTxCameraImageWithName(@"ic_photo_original_def") forState:UIControlStateNormal];
         [_originalBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_originalBtn addTarget:self action:@selector(btnPressed:) forControlEvents:UIControlEventTouchUpInside];
     }

@@ -13,5 +13,6 @@
 
 @property (nonatomic, assign) LTxCameraStringCallbackBlock scanCallback;
 
+-(void)scanCompleteWithQRCode:(NSString*)qrCode;
 
 @end

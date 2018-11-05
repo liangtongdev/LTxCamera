@@ -75,7 +75,7 @@
 
 -(UIImageView*)playImageView{
     if (!_playImageView) {
-        _playImageView = [[UIImageView alloc] initWithImage:LTxImageWithName(@"ic_video_play")];
+        _playImageView = [[UIImageView alloc] initWithImage:LTxCameraImageWithName(@"ic_video_play")];
         _playImageView.translatesAutoresizingMaskIntoConstraints = NO;
         _playImageView.contentMode = UIViewContentModeScaleToFill;
     }
@@ -87,9 +87,9 @@
 -(void)setModel:(LTxCameraAssetModel *)model{
     _model = model;
     if (model.isSelected) {
-        [self.selectBtn setImage:LTxImageWithName(@"ic_photo_selected") forState:UIControlStateNormal];
+        [self.selectBtn setImage:LTxCameraImageWithName(@"ic_photo_selected") forState:UIControlStateNormal];
     }else{
-        [self.selectBtn setImage:LTxImageWithName(@"ic_photo_unselected") forState:UIControlStateNormal];
+        [self.selectBtn setImage:LTxCameraImageWithName(@"ic_photo_unselected") forState:UIControlStateNormal];
     }
     
     PHAsset* asset = model.asset;

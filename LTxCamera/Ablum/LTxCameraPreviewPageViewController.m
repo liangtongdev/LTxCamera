@@ -49,7 +49,7 @@
     
     //返回按钮
     UIButton *backBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 26, 26)];
-    [backBtn setImage:LTxImageWithName(@"ic_navi_back") forState:UIControlStateNormal];
+    [backBtn setImage:LTxCameraImageWithName(@"ic_navi_back") forState:UIControlStateNormal];
     [backBtn addTarget:self action:@selector(ltxCamera_backAction) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
 
@@ -115,9 +115,9 @@
     LTxCameraAssetModel* model = [_models objectAtIndex:_selectedIndex];
     dispatch_async(dispatch_get_main_queue(), ^{
         if (model.isSelected) {
-            [self.selectBtn setImage:LTxImageWithName(@"ic_photo_selected") forState:UIControlStateNormal];
+            [self.selectBtn setImage:LTxCameraImageWithName(@"ic_photo_selected") forState:UIControlStateNormal];
         }else{
-            [self.selectBtn setImage:LTxImageWithName(@"ic_photo_unselected") forState:UIControlStateNormal];
+            [self.selectBtn setImage:LTxCameraImageWithName(@"ic_photo_unselected") forState:UIControlStateNormal];
         }
     });
     

@@ -371,7 +371,7 @@
     _toolView.allowRecordVideo = self.allowRecordVideo;
     _toolView.maxRecordDuration = self.maxRecordDuration;
     
-    _focusCursorImageView = [[UIImageView alloc] initWithImage:LTxImageWithName(@"ic_camera_focus")];
+    _focusCursorImageView = [[UIImageView alloc] initWithImage:LTxCameraImageWithName(@"ic_camera_focus")];
     [self.view addSubview:_focusCursorImageView];
 }
 
@@ -412,7 +412,7 @@
     if (!_toggleCameraBtn) {
         _toggleCameraBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         _toggleCameraBtn.translatesAutoresizingMaskIntoConstraints = NO;
-        [_toggleCameraBtn setImage:LTxImageWithName(@"ic_camera_action_toggle") forState:UIControlStateNormal];
+        [_toggleCameraBtn setImage:LTxCameraImageWithName(@"ic_camera_action_toggle") forState:UIControlStateNormal];
         [_toggleCameraBtn addTarget:self action:@selector(btnToggleCameraAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _toggleCameraBtn;

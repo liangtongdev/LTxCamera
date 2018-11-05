@@ -265,7 +265,7 @@
     if (!_dismissBtn) {
         _dismissBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         _dismissBtn.translatesAutoresizingMaskIntoConstraints = NO;
-        [_dismissBtn setImage:LTxImageWithName(@"ic_camera_action_dismiss") forState:UIControlStateNormal];
+        [_dismissBtn setImage:LTxCameraImageWithName(@"ic_camera_action_dismiss") forState:UIControlStateNormal];
         [_dismissBtn addTarget:self action:@selector(actionBtnPressed:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _dismissBtn;
@@ -275,7 +275,7 @@
         _cancelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         _cancelBtn.translatesAutoresizingMaskIntoConstraints = NO;
         _cancelBtn.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.9];
-        [_cancelBtn setImage:LTxImageWithName(@"ic_camera_action_cancel") forState:UIControlStateNormal];
+        [_cancelBtn setImage:LTxCameraImageWithName(@"ic_camera_action_cancel") forState:UIControlStateNormal];
         [_cancelBtn addTarget:self action:@selector(actionBtnPressed:) forControlEvents:UIControlEventTouchUpInside];
         _cancelBtn.hidden = YES;
     }
@@ -286,7 +286,7 @@
         _doneBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         _doneBtn.translatesAutoresizingMaskIntoConstraints = NO;
         _doneBtn.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.9];
-        [_doneBtn setImage:LTxImageWithName(@"ic_camera_action_done") forState:UIControlStateNormal];
+        [_doneBtn setImage:LTxCameraImageWithName(@"ic_camera_action_done") forState:UIControlStateNormal];
         [_doneBtn addTarget:self action:@selector(actionBtnPressed:) forControlEvents:UIControlEventTouchUpInside];
         _doneBtn.hidden = YES;
     }

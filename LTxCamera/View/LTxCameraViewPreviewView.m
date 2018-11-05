@@ -34,7 +34,7 @@
     self.alpha = 0;
     self.playerLayer = [[AVPlayerLayer alloc] init];
     
-    _playPauseIV = [[UIImageView alloc] initWithImage:LTxImageWithName(@"ic_video_play")];
+    _playPauseIV = [[UIImageView alloc] initWithImage:LTxCameraImageWithName(@"ic_video_play")];
     _playPauseIV.frame = CGRectMake(0, 0, 60, 60);
     _playPauseIV.contentMode = UIViewContentModeScaleAspectFill;
 

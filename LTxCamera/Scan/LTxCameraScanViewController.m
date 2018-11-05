@@ -23,6 +23,11 @@
     
 }
 
+-(void)dealloc{
+    [self.session stopRunning];// 1、停止会话
+    [self.previewLayer removeFromSuperlayer];// 2、删除预览图层
+}
+
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     _scanResult = NO;
@@ -31,12 +36,8 @@
 }
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
+    _scanResult = YES;
     [self.scanView removeTimer];
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),^{
-        [self.session stopRunning];// 1、停止会话
-        [self.previewLayer removeFromSuperlayer];// 2、删除预览图层
-    });
-    
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 

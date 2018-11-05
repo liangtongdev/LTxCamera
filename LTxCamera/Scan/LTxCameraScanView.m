@@ -81,14 +81,14 @@
     
     if (isNight) {
         if (_openState) {
-            [_openFlashLightBtn setImage:LTxImageWithName(@"ic_flash_light_close") forState:UIControlStateNormal];
+            [_openFlashLightBtn setImage:LTxCameraImageWithName(@"ic_flash_light_close") forState:UIControlStateNormal];
         }else{
-            [_openFlashLightBtn setImage:LTxImageWithName(@"ic_flash_light_open") forState:UIControlStateNormal];
+            [_openFlashLightBtn setImage:LTxCameraImageWithName(@"ic_flash_light_open") forState:UIControlStateNormal];
         }
         _openFlashLightBtn.hidden = NO;
     }else{
         if (_openState) {
-            [_openFlashLightBtn setImage:LTxImageWithName(@"ic_flash_light_close") forState:UIControlStateNormal];
+            [_openFlashLightBtn setImage:LTxCameraImageWithName(@"ic_flash_light_close") forState:UIControlStateNormal];
             _openFlashLightBtn.hidden = NO;
         }else{
             _openFlashLightBtn.hidden = YES;
@@ -143,7 +143,7 @@
     if (!_animationImageView) {
         _animationImageView = [[UIImageView alloc] init];
         _animationImageView.translatesAutoresizingMaskIntoConstraints = NO;
-        UIImage* image = LTxImageWithName(@"ic_camera_qrcode_scan_animate_line");
+        UIImage* image = LTxCameraImageWithName(@"ic_camera_qrcode_scan_animate_line");
         _animationImageView.image = image;
         [self addSubview:_animationImageView];
     }
