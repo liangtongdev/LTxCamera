@@ -73,21 +73,26 @@ LTxCamera is available in CocoaPods, specify it in your *Podfile*:
 
 ### Qrcode
 
-
-![](https://github.com/liangtongdev/LTxCamera/blob/master/screenshots/qrcode.png)
+![](https://github.com/liangtongdev/LTxCamera/blob/master/screenshots/qr-scan.png)
 
 #### Usage
 
-二维码扫描，自动感应设备光线提示开灯
+二维码扫描，自动感应设备光线提示开灯。支持自定义颜色，图片
 
 ```Objective-C
         LTxCameraScanViewController* scanVC = [[LTxCameraScanViewController alloc] init];
+        scanVC.scanAnimateImage = [UIImage imageNamed:@"QRCodeScanningLineGrid"];
+        scanVC.scanAnimateImageHeight = 100.f;
         scanVC.scanCallback = ^(NSString *qrcode) {
             NSLog(@"qrcode : %@",qrcode);
         };
         [self.navigationController pushViewController:scanVC animated:NO];
 }
 ```
+
+
+
+![](https://github.com/liangtongdev/LTxCamera/blob/master/screenshots/qrcode.png)
 
 二维码生成，颜色可定制
 

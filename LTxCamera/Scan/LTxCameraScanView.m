@@ -14,6 +14,7 @@
 /** 扫描动画线(冲击波) */
 @property (nonatomic, strong) UIImageView *animationImageView;
 @property (nonatomic, strong) NSLayoutConstraint* animateTopConstraint;
+@property (nonatomic, strong) NSLayoutConstraint* animateHeightConstraint;
 @property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, assign) NSInteger animateFlag;
 @end
@@ -34,6 +35,9 @@
     self.cornerColor = [UIColor greenColor];
     self.cornerWidth = 3.f;
     self.cornerLength = 26.f;
+    
+    self.scanAnimateImageHeight = 10.f;
+    
     self.backgroundColor = [UIColor clearColor];
     
     //扫描边框 ： 固定大小，居中显示
@@ -64,11 +68,9 @@
 - (void)animationLineAction {
     ++_animateFlag;
     NSInteger constant = _animateFlag * 3;
-    if (constant > LTX_CAMERA_QRCODE_SCAN_VIEW_SIZE - LTX_CAMERA_QRCODE_ANIMATE_VIEW_HEIGHT / 2) {
+    if (constant > LTX_CAMERA_QRCODE_SCAN_VIEW_SIZE - self.scanAnimateImageHeight) {
         _animateFlag = 0;
-        constant = LTX_CAMERA_QRCODE_ANIMATE_VIEW_HEIGHT / 2;
-    }else if (constant < LTX_CAMERA_QRCODE_ANIMATE_VIEW_HEIGHT / 2){
-        constant = LTX_CAMERA_QRCODE_ANIMATE_VIEW_HEIGHT / 2;
+        constant = 0;
     }
     CGFloat top = self.bounds.size.height / 2 - LTX_CAMERA_QRCODE_SCAN_VIEW_SIZE / 2;
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -121,7 +123,7 @@
     //animateImageView
     NSLayoutConstraint* aCenterX = [NSLayoutConstraint constraintWithItem:self.animationImageView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.f constant:0];
     NSLayoutConstraint* aWidth = [NSLayoutConstraint constraintWithItem:self.animationImageView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.f constant:LTX_CAMERA_QRCODE_SCAN_VIEW_SIZE];
-    NSLayoutConstraint* aHeight = [NSLayoutConstraint constraintWithItem:self.animationImageView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.f constant:LTX_CAMERA_QRCODE_ANIMATE_VIEW_HEIGHT];
+    _animateHeightConstraint = [NSLayoutConstraint constraintWithItem:self.animationImageView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.f constant:self.scanAnimateImageHeight];
     _animateTopConstraint = [NSLayoutConstraint constraintWithItem:self.animationImageView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.f constant:0];
 
     //OpenFlashLightBtn
@@ -131,7 +133,7 @@
     //TipLabel
     NSLayoutConstraint* tCenterX = [NSLayoutConstraint constraintWithItem:self.tipL attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.f constant:0];
     NSLayoutConstraint* tCenterY = [NSLayoutConstraint constraintWithItem:self.tipL attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1.f constant:LTX_CAMERA_QRCODE_SCAN_VIEW_SIZE / 2 + 30];
-    [NSLayoutConstraint activateConstraints: @[aCenterX,aWidth,aHeight,_animateTopConstraint,
+    [NSLayoutConstraint activateConstraints: @[aCenterX,aWidth,_animateHeightConstraint,_animateTopConstraint,
                                                bCenterX,bCenterY,tCenterX,tCenterY
                                                ]];
 }
@@ -174,6 +176,24 @@
         [self addSubview:_tipL];
     }
     return _tipL;
+}
+
+#pragma mark - Setter
+-(void)setScanAnimateImage:(UIImage *)scanAnimateImage{
+    _scanAnimateImage = scanAnimateImage;
+    if (scanAnimateImage) {
+        _animationImageView.image = scanAnimateImage;
+    }
+}
+
+-(void)setScanAnimateImageHeight:(CGFloat)scanAnimateImageHeight{
+    _scanAnimateImageHeight = scanAnimateImageHeight;
+    if (scanAnimateImageHeight > 0) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.animateHeightConstraint.constant = scanAnimateImageHeight;
+            [self.animationImageView layoutIfNeeded];
+        });
+    }
 }
 
 

@@ -13,7 +13,6 @@
  **/
 
 #define LTX_CAMERA_QRCODE_SCAN_VIEW_SIZE 220
-#define LTX_CAMERA_QRCODE_ANIMATE_VIEW_HEIGHT 10
 
 @interface LTxCameraScanView : UIView
 @property (nonatomic, strong) UIColor* borderColor;
@@ -22,6 +21,9 @@
 @property (nonatomic, strong) UIColor* cornerColor;
 @property (nonatomic, assign) CGFloat cornerWidth;
 @property (nonatomic, assign) CGFloat cornerLength;
+
+@property (nonatomic, strong) UIImage* scanAnimateImage;
+@property (nonatomic, assign) CGFloat scanAnimateImageHeight;
 
 
 -(void)addTimer;

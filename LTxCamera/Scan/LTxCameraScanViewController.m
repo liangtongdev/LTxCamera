@@ -125,6 +125,28 @@
 -(void)setupCameraScanView{
     _scanView = [[LTxCameraScanView alloc] init];
     _scanView.translatesAutoresizingMaskIntoConstraints = NO;
+    if (_borderColor) {
+        _scanView.borderColor = _borderColor;
+    }
+    if (_borderWidth > 0) {
+        _scanView.borderWidth = _borderWidth;
+    }
+    if (_cornerColor) {
+        _scanView.cornerColor = _cornerColor;
+    }
+    if (_cornerWidth > 0) {
+        _scanView.cornerWidth = _cornerWidth;
+    }
+    if (_cornerLength > 0) {
+        _scanView.cornerLength = _cornerLength;
+    }
+    if (_scanAnimateImage) {
+        _scanView.scanAnimateImage = _scanAnimateImage;
+    }
+    if (_scanAnimateImageHeight > 0) {
+        _scanView.scanAnimateImageHeight = _scanAnimateImageHeight;
+    }
+    
     [self.view addSubview:_scanView];
     [self addConstraintsOnComponents];
     

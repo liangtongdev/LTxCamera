@@ -23,6 +23,11 @@
     NSString* identifier = cell.reuseIdentifier;
     if ([identifier isEqualToString:@"qr-scan"]){
         LTxCameraScanViewController* scanVC = [[LTxCameraScanViewController alloc] init];
+        scanVC.cornerColor = [UIColor redColor];
+        scanVC.borderColor = [UIColor yellowColor];
+        scanVC.cornerWidth = 4.f;
+        scanVC.scanAnimateImage = [UIImage imageNamed:@"QRCodeScanningLineGrid"];
+        scanVC.scanAnimateImageHeight = 100.f;
         scanVC.scanCallback = ^(NSString *qrcode) {
             NSLog(@"qrcode : %@",qrcode);
         };
