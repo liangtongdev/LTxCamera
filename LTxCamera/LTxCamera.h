@@ -2,7 +2,7 @@
 //  LTxCamera.h
 //  CustomCameraDemo
 //
-//  Created by Li Kai on 2018/7/25.
+//  Created by liangtong on 2018/7/25.
 //
 
 #ifndef LTxCamera_h
