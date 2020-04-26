@@ -11,7 +11,7 @@
 
 @interface LTxCameraScanViewController : UIViewController
 
-@property (nonatomic, assign) LTxCameraStringCallbackBlock scanCallback;
+@property (nonatomic, copy) LTxCameraStringCallbackBlock scanCallback;
 
 -(void)scanCompleteWithQRCode:(NSString*)qrCode;
 
